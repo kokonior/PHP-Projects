@@ -38,4 +38,7 @@ echo "<br>";
 print_r( array_reverse($kotak) );
 echo "<br>";
 
+shuffle($kotak);
+print_r( $kotak );
+echo "<br>";
 ?>
