@@ -23,5 +23,9 @@ $angka = [3,2,15,20,11,77,89];
 </head>
 <body>
 
+	<?php for( $i = 0; $i < 7; $i++ ) { ?>
+	<div><?php echo $angka[$i]; ?></div>
+	<?php } ?>
+	
 </body>
 </html>
