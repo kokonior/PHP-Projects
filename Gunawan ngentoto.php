@@ -45,7 +45,13 @@ if ($uang < $harga) {
 Uang kita = <input type="text" name="uang" required><br>
 Harga nasi goreng = <input type="text" name="harga" required><br>
 
+<?php
+$uang=@$_POST["uang"]; // untuk mendapatkan nilai dari text field dengan name="uang" 
+$harga=@$_POST["harga"]; // sama seperti diatas tapi "harga"
 
+
+
+?>
 
 <br><input type="submit" value="Proses">
 </form>
