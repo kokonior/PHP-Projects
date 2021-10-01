@@ -41,4 +41,10 @@ echo "<br>";
 shuffle($kotak);
 print_r( $kotak );
 echo "<br>";
+
+echo count($kotak);
+echo "<br>";
+echo count($nama);
+echo "<br>";
+
 ?>
