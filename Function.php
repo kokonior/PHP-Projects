@@ -14,5 +14,8 @@ echo date("l", strtotime("25 aug 1985"));
 
 $text = "Hai semuanya";
 echo strlen($text);
+echo "<br>";
+
+echo str_word_count($text);
 
 ?>
