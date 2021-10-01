@@ -25,3 +25,14 @@
 	var_dump($hari);
 
 ?>
+
+
+<?php 
+
+$kotak = array('anjing', 'kurakura', 'koala', 'anjing');
+$nama = ['Hilman', 'Endy', 'Tiqa'];
+
+print_r( array_unique($kotak) );
+echo "<br>";
+
+?>
