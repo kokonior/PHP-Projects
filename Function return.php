@@ -7,5 +7,15 @@ function salam($name) {
 function salam($date, $name) {
 	return "Selamat $date, $name";
 }
-
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Latihan Function</title>
+</head>
+<body>
+
+</body>
+</html>
