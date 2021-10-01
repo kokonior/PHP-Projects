@@ -52,6 +52,10 @@ $data = array( 	"nama" 	=> "kokonior" ,
 		"kerja" => "pengacara" ,
 );
 
+$data2 = array( "istri" => "tobrut" ,
+		"laptop"=> "none" ,
+);
+
 $data['nama'] = "Koko Nio Ramadhan";
 echo "Nama adalah" . $data['nama'];
 
@@ -59,5 +63,7 @@ print_r( array_values($data) );
 echo "<br>";
 
 print_r( array_keys($data) );
+echo "<br>";
 
+print_r( array_merge($data, $data2) );
 ?>
