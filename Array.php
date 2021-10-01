@@ -56,4 +56,8 @@ $data['nama'] = "Koko Nio Ramadhan";
 echo "Nama adalah" . $data['nama'];
 
 print_r( array_values($data) );
+echo "<br>";
+
+print_r( array_keys($data) );
+
 ?>
