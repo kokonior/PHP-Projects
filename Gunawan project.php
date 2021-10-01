@@ -29,6 +29,8 @@ if ($uang < $harga) {
 	$kurang = $harga - $uang; 
 	echo " Om nasigoreng : Ga bisa! Uang anda kurang <b>Rp.$kurang</b>!";
 } 
-
+else {
+	echo "Om nasigoreng : Bisa kok!";
+}
 
 ?>
