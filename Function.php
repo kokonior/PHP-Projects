@@ -17,5 +17,8 @@ echo strlen($text);
 echo "<br>";
 
 echo str_word_count($text);
+echo "<br>";
+
+echo str_repeat("Hai", "Halo", $text);
 
 ?>
