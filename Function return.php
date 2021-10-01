@@ -1,10 +1,10 @@
 <?php
 
-function salam($name) {
+function salam($name = 'Admin' ) {
 	return "Selamat Datang, $name";
 }
 
-function salam($date, $name) {
+function salam($date = 'Selamat Datang', $name = 'admin') {
 	return "Selamat $date, $name";
 }
 ?>
@@ -16,6 +16,6 @@ function salam($date, $name) {
 	<title>Latihan Function</title>
 </head>
 <body>
-	<h1><?= salam("Pagi"); ?></h1>
+	<h1>Hallo Selamat Datang <?= salam("Pagi"); ?></h1>
 </body>
 </html>
