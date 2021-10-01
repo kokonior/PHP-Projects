@@ -12,4 +12,7 @@ echo date("l", mktime(0,0,0,10,1,2021));
 
 echo date("l", strtotime("25 aug 1985"));
 
+$text = "Hai semuanya";
+echo strlen($text);
+
 ?>
