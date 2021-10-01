@@ -11,5 +11,9 @@
 	echo "<br>";
 
 	echo $array[0];
+	echo "<br>";
+
+	echo $bulan[1];
+	echo "<br>";
 
 ?>
