@@ -16,4 +16,9 @@
 	echo $bulan[1];
 	echo "<br>";
 
+	var_dump($hari);
+	$hari[] = "Kamis";
+	echo "<br>";
+	var_dump($hari);
+
 ?>
