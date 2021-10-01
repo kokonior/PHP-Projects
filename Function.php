@@ -20,5 +20,8 @@ echo str_word_count($text);
 echo "<br>";
 
 echo str_repeat("Hai", "Halo", $text);
+echo "<br>";
+
+echo str_repeat( str_replace("Hai", "Halo", $text));
 
 ?>
