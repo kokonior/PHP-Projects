@@ -1,5 +1,5 @@
 # PHP-Projects
 
-For personal projects not commercial
+For personal projects not commercial 
 
 # hacktoberfest 2021
