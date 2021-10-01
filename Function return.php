@@ -16,6 +16,6 @@ function salam($date, $name) {
 	<title>Latihan Function</title>
 </head>
 <body>
-
+	<h1><?= salam("Pagi"); ?></h1>
 </body>
 </html>
