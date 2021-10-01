@@ -47,4 +47,11 @@ echo "<br>";
 echo count($nama);
 echo "<br>";
 
+$data = array( 	"nama" 	=> "kokonior" ,
+		"umur" 	=> 22 ,
+		"kerja" => "pengacara" ,
+);
+
+$data['nama'] = "Koko Nio Ramadhan";
+echo "Nama adalah" . $data['nama'];
 ?>
