@@ -11,4 +11,10 @@ while ($i < 5 ) {
 }
 $i++;
 
+$i = 10;
+do {
+	echo "Hello World! <br>";
+$i++;
+} while( $i < 5 );
+
 ?>
