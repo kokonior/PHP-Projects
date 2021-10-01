@@ -18,6 +18,9 @@
 
 	var_dump($hari);
 	$hari[] = "Kamis";
+	$hari[] = "Jum'at";
+	$hari[] = "Sabtu";
+	$hari[] = "Minggu";
 	echo "<br>";
 	var_dump($hari);
 
