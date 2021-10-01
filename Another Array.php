@@ -10,5 +10,11 @@ $mahasiswa = ["Koko NioR", "083865127691", "Universitas Genjot Madoka", "Email"]
 </head>
 <body>
 
+<ul>
+	<?php foreach ($mahasiswa as $mhs) : ?>
+		<li><?= $mhs; ?></li>
+	<?php endforeach; ?>
+</ul>
+
 </body>
 </html>
