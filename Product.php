@@ -21,4 +21,14 @@ $Product3->penulis = "Masashi Kishimoto";
 $Product3->penerbit = "Shonen Jump";
 $Product3->harga = 30000;
 var_dump($Product3);
+
+$Product4 = new Product();
+$Product4->judul = "Uncharted";
+$Product4->penulis = "Neil Druckmann";
+$Product4->penerbit = "Sony Computer";
+$Product4->harga = 250000;
+
+echo "Komik : " . $Product3->getLabel();
+echo "<br>";
+echo "Game : " . $Product4->getLabel();
 ?>
