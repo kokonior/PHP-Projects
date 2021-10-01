@@ -5,5 +5,8 @@
   $array = [123, "tulisan", false];
 
   var_dump($hari);
+  echo "<br>";
+
+	print_r($bulan);
 
 ?>
