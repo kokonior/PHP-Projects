@@ -9,7 +9,7 @@ $angka = [3,2,15,20,11,77,89,8,7];
 	<meta charset="utf-8">
 	<title>Exanthenon</title>
 	<style>
-		div {
+		.kotak {
 			width: 50px;
 			height: 50px;
 			background-color: salmon;
@@ -18,13 +18,20 @@ $angka = [3,2,15,20,11,77,89,8,7];
 			margin: 3px;
 			float: left;
 		}
+		.clear { clear: both; }
 	</style>
 </head>
 <body>
 
 	<?php for( $i = 0; $i < count($angka); $i++ ) { ?>
-	<div><?php echo $angka[$i]; ?></div>
+	<div class="kotak"><?php echo $angka[$i]; ?></div>
 	<?php } ?>
-	
+
+<div class="clear"></div>
+
+	<?php foreach ($angka as $a) { ?>
+	<div class="kotak"><?php echo $a; ?></div>
+	<?php } ?>
+
 </body>
 </html>
