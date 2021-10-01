@@ -16,5 +16,12 @@ $mahasiswa = ["Koko NioR", "083865127691", "Universitas Genjot Madoka", "Email"]
 	<?php endforeach; ?>
 </ul>
 
+<ul>
+	<li><?= $mahasiswa[0]; ?></li>
+	<li><?= $mahasiswa[1]; ?></li>
+	<li><?= $mahasiswa[2]; ?></li>
+	<li><?= $mahasiswa[3]; ?></li>
+</ul>
+	
 </body>
 </html>
