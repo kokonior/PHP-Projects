@@ -35,4 +35,7 @@ $nama = ['Hilman', 'Endy', 'Tiqa'];
 print_r( array_unique($kotak) );
 echo "<br>";
 
+print_r( array_reverse($kotak) );
+echo "<br>";
+
 ?>
