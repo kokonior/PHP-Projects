@@ -17,4 +17,13 @@ do {
 $i++;
 } while( $i < 5 );
 
+//cek umur by php
+
+$u = trim(fgets(STDIN)); //masukan umur mu
+if($i < 18 ) {
+    echo 'kamu boleh masuk';
+} else {
+    echo 'Kamu gak boleh masuk';
+}
+
 ?>
