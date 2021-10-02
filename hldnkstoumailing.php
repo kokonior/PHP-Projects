@@ -1,17 +1,12 @@
 <?php
 $subjek = 'Laporan BK-Digital';
-$mailto = 'yourmail';
-
-
-
-$name = $_POST['names'];
-$message = $_POST['messages'];
+$mailto = 'mamashildan48'; // Email lu
 
 
 $body = <<<EOD
 <br><hr><br>
-Pengirim : <font color="red">$name</font> <br>
-Pesan : <font color="red">$message</font> <br>
+Pengirim : <font color="red">Hildan Kusto Utomo</font> <br>
+Pesan : <font color="red">no 127 sedang menyontek</font> <br>
 EOD;
 
 
