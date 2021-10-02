@@ -1,0 +1,22 @@
+// Belajar Obfuscate PHP
+
+Tujuan :
+1. Supaya Script/source code tidak ditampilkan apa adanya (supaya ditampilkan dalam bentuk enkripsi)
+2. Supaya script tidak ditiru ataupun dimodifikasi tanpa seizin pembuat source codenya
+
+example
+
+Encode :
+
+<?php
+
+$en=base64_encode("Belajar Menyembunyikan kode php");
+echo $en;
+
+?>
+
+Decode :
+
+<?php
+eval(base64_decode('QmVsYWphciBNZW55ZW1idW55aWthbiBrb2RlIHBocA=='));
+?>
