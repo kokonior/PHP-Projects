@@ -42,6 +42,10 @@
           <i class="fa fa-cog" aria-hidden="true"></i> Pengaturan
         </a>
       </li>
+        <li>
+        <a href="#">
+          <iaria-hidden="true"></i> ganti nama
+      </li>
       <li>
         <a href="#">
           <iaria-hidden="true"></i> Sign out
