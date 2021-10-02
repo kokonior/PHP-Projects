@@ -14,7 +14,7 @@ $a = [
     [
         'nama' => 'zal',
         'alamat' => [
-            'jalan' => 'sudirman',
+            'jalan' => 'sudirman sahid',
             'kelurahan' => '1',
         ]
     ]
