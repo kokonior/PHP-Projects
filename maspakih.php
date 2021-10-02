@@ -22,12 +22,12 @@
 <body>
 <div class="sidebar-container">
     <div class="sidebar-logo">
-      AyoNulis
+      lets menulis
     </div>
     <ul class="sidebar-navigation">
       <li class="header">Navigation</li>
       <li>
-        <a href="#">
+        <a href="index.html">
           <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard
         </a>
       </li>
