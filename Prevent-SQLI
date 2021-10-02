@@ -1,0 +1,29 @@
+Example Scenario :
+
+Vuln :
+<?php
+$query = "SELECT * FROM users WHERE username = '" . $_POST['username'] . "'";
+$query .= " AND password = '" . $_POST['password'] . "'";			 
+?>
+
+This code uses PDO with parameterized queries to prevent the SQL injection vulnerability :
+<?php
+$id = $_GET['id'];
+$db_connection = new PDO('mysql:host=localhost;dbname=sql_injection_example', 'dbuser', 'dbpasswd');
+//preparing the query
+$sql = "SELECT username 
+            FROM users
+            WHERE id = :id";
+$query = $db_connection->prepare($sql);
+$query->bindParam(':id', $id);
+$query->execute();
+//getting the result
+$query->setFetchMode(PDO::FETCH_ASSOC);
+$result = $query->fetchColumn();
+print(htmlentities($result));
+
+use the mysql_real_escape_string() :
+$db_connection = mysqli_connect("localhost", "user", "password", "db");
+		$username = mysqli_real_escape_string($db_connection, $_POST['username']);
+		$password = mysqli_real_escape_string($db_connection, $_POST['password']);
+		$query = "SELECT * FROM users WHERE username = '" . $username. "' AND password = '" . $password . "'"; 
