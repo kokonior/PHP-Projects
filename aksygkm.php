@@ -230,3 +230,39 @@
                     <div class="col-5 align-self-center">
                         <img src="images/allef-vinicius-108153.jpg" alt="img" class="fh5co_most_trading"/>
                     </div>
+<div class="col-7 paddding">
+                        <div class="most_fh5co_treding_font"> Enim ad minim veniam nostrud xercitation ullamco.</div>
+                        <div class="most_fh5co_treding_font_123"> April 18, 2016</div>
+                    </div>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-5 align-self-center">
+                        <img src="images/download (2).jpg" alt="img" class="fh5co_most_trading"/>
+                    </div>
+                    <div class="col-7 paddding">
+                        <div class="most_fh5co_treding_font"> Magna aliqua ut enim ad minim veniam quis nostrud.</div>
+                        <div class="most_fh5co_treding_font_123"> April 18, 2016</div>
+                    </div>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-5 align-self-center"><img src="images/seth-doyle-133175.jpg" alt="img"
+                                                              class="fh5co_most_trading"/></div>
+                    <div class="col-7 paddding">
+                        <div class="most_fh5co_treding_font"> Magna aliqua ut enim ad minim veniam quis nostrud.</div>
+                        <div class="most_fh5co_treding_font_123"> April 18, 2016</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-0">
+            <div class="col-12 text-center pb-4 pt-4">
+                <a href="#" class="btn_mange_pagging"><i class="fa fa-long-arrow-left"></i>&nbsp;&nbsp; Previous</a>
+                <a href="#" class="btn_pagging">1</a>
+                <a href="#" class="btn_pagging">2</a>
+                <a href="#" class="btn_pagging">3</a>
+                <a href="#" class="btn_pagging">...</a>
+                <a href="#" class="btn_mange_pagging">Next <i class="fa fa-long-arrow-right"></i>&nbsp;&nbsp; </a>
+             </div>
+        </div>
+    </div>
+</div>
