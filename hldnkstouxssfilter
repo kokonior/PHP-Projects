@@ -1,7 +1,0 @@
-function filterxss($data){
-
-$filterxss = htmlspecialchars(htmlentities($data,ENT_QUOTES));
-
-return $filter;
-
-}
