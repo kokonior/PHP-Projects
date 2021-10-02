@@ -26,4 +26,4 @@ if($i < 18 ) {
     echo 'Kamu gak boleh masuk';
 }
 
-?>
+?> 
