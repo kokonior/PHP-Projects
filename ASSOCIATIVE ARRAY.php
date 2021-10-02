@@ -8,5 +8,20 @@ foreach($umur as $x => $x_value) {
   echo "<br>";
 }
 
+//array in array
+
+$a = [
+    [
+        'nama' => 'zal',
+        'alamat' => [
+            'jalan' => 'sudirman',
+            'kelurahan' => '1',
+        ]
+    ]
+];
+
+var_dump($a);
+
+
 
 ?>
