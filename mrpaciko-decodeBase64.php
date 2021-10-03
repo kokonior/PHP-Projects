@@ -1,5 +1,5 @@
 <?php
-$key = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; //Base64
-$result = base64_encode($key);
-echo $result;
+$value = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; //MD5
+$md5 = md5($value);
+echo $md5;
 ?>
