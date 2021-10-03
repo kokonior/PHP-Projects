@@ -1,8 +1,10 @@
 <?php 
 
+//jika list terlau banyak anda bisa menggunakan
+// $list 	  = files_put_contets("namaFile");
 $list 		  = "[19:51:44] [INFO] retrieved: 'milacadacio@yahoo.com',[19:51:44] [INFO] retrieved: 'milacadacio@yahoo.com1'";
 $explode 	  = explode(',', $list);
-$banyakData	= count($explode);
+$banyakData	  = count($explode);
 
 for ($i = 0; $i < $banyakData ; $i++) { 
 	$result	= explode(" ", $explode[$i]);
