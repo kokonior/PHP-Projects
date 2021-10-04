@@ -1,5 +1,19 @@
-<?php $SCHEMA = "marlboro_redrush_2021"
-$SCHEMA_GAME = "marlboro_redrush_game_2021"
-$SCHEMA_REPORT = "marlboro_redrush_report_2021"
-$SCHEMA_REPORT_TEMP = "marlboro_redrush_report_temp_2021" // $SCHEMA = "redrush";// $SCHEMA_GAME = "redrush_game";// $SCHEMA_REPORT = "redrush_report";
-$SCHEMA_REPORT_TEMP = "redrush_report_temp"; $DATABASE[0] =
+<?php
+@include_once "locale.inc.php";
+
+$CONFIG['LOG_DIR'] = "../logs/";
+$GLOBAL_PATH = "../";
+$APP_PATH = "../com/";
+$ENGINE_PATH = "../engines/";
+$WEBROOT = "../public_html/";
+
+//error_reporting(E_ALL & ~E_DEPRECATED);
+error_reporting(0);
+//ini_set('display_errors',1);
+// ini_set('display_startup_errors',1);
+//set aplikasi yang digunakan
+define('APPLICATION','application');
+define('COORPORATE_APPS','coorporate_apps');
+define('MOBILE_APPS','mobile');
+define('WAP_APPS','wap_apps');
+define('DASHBOARD_APPS','dashboard');
