@@ -21,13 +21,15 @@ $pc_vellai = new pc();
 $pc_vellai->pemilik="vellai";
 $pc_vellai->merk="Asus";
 $pc_vellai->spek="hight speak";
-// tampilkan property
+
+// tampilkan property dari pemilik
 echo $pc_vellai->pemilik;
 echo "<br />";
 echo $pc_vellai->merk;
 echo "<br />";
 echo $pc_vellai->spek;
 echo "<br />";
+
 // tampilkan method
 echo $pc_vellai->hidupkan_pc();
 echo "<br />";
