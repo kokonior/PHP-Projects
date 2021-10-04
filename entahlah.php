@@ -1,6 +1,7 @@
 	<?php
 // buat class pc
 class pc {
+	
  // buat property untuk class pc
  var $pemilik;
  var $merk;
@@ -30,7 +31,7 @@ echo "<br />";
 echo $pc_vellai->spek;
 echo "<br />";
 
-// tampilkan method
+// tampilkan method dari pemilik
 echo $pc_vellai->hidupkan_pc();
 echo "<br />";
 echo $pc_vellai->matikan_pc();
