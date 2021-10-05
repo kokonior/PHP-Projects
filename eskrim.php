@@ -72,4 +72,5 @@ function urut($length)
         }
         return $str;
     }
+echo "powered by kaos"
 ?>
