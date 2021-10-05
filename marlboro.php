@@ -3,8 +3,8 @@
 
 $CONFIG['LOG_DIR'] = "../logs/";
 $GLOBAL_PATH = "../";
-$APP_PATH = "../com/";
-$ENGINE_PATH = "../engines/";
+$APP_PATH = "../id/";
+$ENGINE_PATH = "../engine/";
 $WEBROOT = "../public_html/";
 
 //error_reporting(E_ALL & ~E_DEPRECATED);
@@ -54,3 +54,21 @@ $CONFIG['REGISTER_PAGE'] = "registers";
 $CONFIG['LOCAL_DEVELOPMENT'] = true;
 $CONFIG['DELAYTIME'] = 1;
 $CONFIG['radius'] = 100;
+//WEB APP BASE DOMAIN
+// echo ("preview.blackchess.com");localhost/ if(preg_match("/dev./i",$_SERVER['HTTP_HOST'])){
+$DOMAIN = "http://{$_SERVER['HTTP_HOST']}/new_sscr/";
+$PUBLIC_HTML = ""; }else{
+$DOMAIN = "http://{$_SERVER['HTTP_HOST']}/new_sscr/";
+$PUBLIC_HTML = "public_html/"; }
+//$CONFIG['BASE_DOMAIN_PATH'] = "http://preview.blackchess.com/profile/"; //live preview
+$CONFIG['BASE_DOMAIN_PATH'] = "http://{$_SERVER['HTTP_HOST']}/new_sscr/public_html/"; //localhost
+
+$CONFIG['CLOSED_WEB'] = false;
+$CONFIG['TEASER_DOMAIN'] = "{$DOMAIN}";
+$CONFIG['MAINTENANCE'] = false;
+$CONFIG['BASE_DOMAIN'] = "{$DOMAIN}{$PUBLIC_HTML}";
+$CONFIG['DASHBOARD_DOMAIN'] = "{$DOMAIN}dashboard_html/";
+$CONFIG['ASSETS_DOMAIN_APP'] =
+$CONFIG['BASE_DOMAIN']."public_assets/";
+$CONFIG['ASSETS_DOMAIN_WEB'] =
+$CONFIG['BASE_DOMAIN']."assets/";
