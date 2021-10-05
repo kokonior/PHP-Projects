@@ -1,4 +1,4 @@
-	<?php
+<?php
 // buat class pc
 class pc {
 	
@@ -6,13 +6,14 @@ class pc {
  var $pemilik;
  var $merk;
  var $spek;
+	
  // buat method untuk class pc
  
  function hidupkan_pc() {
- return "Hidupkan pc";
+ return "Hidupkan sebuah pc";
  }
  function matikan_pc() {
- return "Matikan pc";
+ return "Matikan sebuah pc";
 }
 }
 
@@ -20,7 +21,7 @@ class pc {
 $pc_vellai = new pc();
 // set property
 $pc_vellai->pemilik="vellai";
-$pc_vellai->merk="Asus";
+$pc_vellai->merk="Asus ROG";
 $pc_vellai->spek="hight speak";
 
 // tampilkan property dari pemilik
