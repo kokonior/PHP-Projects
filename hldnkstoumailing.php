@@ -14,9 +14,6 @@ $headers = "From: demo@hildanku.eu\r\n"; // Buat nunjukin pengirim email.
 $headers .= "Content-type: text/html\r\n";
 $success = mail($mailto, $subjek." #".rand(1000,10000), $body, $headers);
 ?>
-<?php
-$random = rand(1000,5000);
-?>
 
 <meta content='0;url=./index.php' http-equiv='refresh'/>
 </head><body>
