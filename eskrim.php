@@ -72,5 +72,6 @@ function urut($length)
         }
         return $str;
     }
-echo "powered by kaos"
+echo "powered by kaos";
+echo "copiright 2021";
 ?>
