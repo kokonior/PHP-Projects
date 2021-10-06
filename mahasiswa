@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Biodata Mahasiswa</title>
+</head>
+<body>
+
+<tr>
+<td valign=top>Nim</td>
+<td valign=top>:</td>
+<td valign=top>$data[nim]</td>
+</tr>
+<tr>
+<td valign=top>Nama</td>
+<td valign=top>:</td>
+<td valign=top>$data[nama]</td>
+</tr>
+<tr>
+<td valign=top>Alamat</td>
+<td valign=top>:</td>
+<td valign=top>$data[alamat]</td>
+</tr>
+</table>
+");
+?>
+<br><br><strong>DATA MAHASISWA</strong>
+<form name="datamahasiswa" action="mahasiswa.php" method="post">
+<table width="500" border="0">
+<tr>
+<td valign="top">Nim</td>
+<td valign="top">:</td>
+<td valign="top"><input type="text" name="nim"></td>
+</tr>
+<tr>
+<td valign="top">Nama</td>
+<td valign="top">:</td>
+<td valign="top"><input type="text" name="nama"></td>
+</tr>
+<tr>
+<td valign="top">Alamat</td>
+<td valign="top">:</td>
+<td valign="top"><input type="text" name="alamat" style="width:300px; height:100px;"></textarea></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><input type="reset" value="reset">&nbsp;&nbsp;<input type="submit" name="submit" value="Send"></td>
+</tr>
+</table>
+</form>
+<? $close = tutupKoneksi($link);?>
+</body>
+</html>
