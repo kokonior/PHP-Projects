@@ -29,17 +29,17 @@ function toMonth($date) {
 function toDay($date) {
     $date = explode(':', $date);
     $day = match($date[1]) {
-        'Mon' => 'Senin, ' . $date[0],
-        'Tue' => 'Selasa, ' . $date[0],
-        'Wed' => 'Rabu, ' . $date[0],
-        'Thu' => 'Kamis, ' . $date[0],
-        'Fri' => 'Jum`at, ' . $date[0],
-        'Sat' => 'Sabtu, ' . $date[0],
-        'Sun' => 'Minggu, ' . $date[0],
+        'Mon' => 'Senin',
+        'Tue' => 'Selasa',
+        'Wed' => 'Rabu',
+        'Thu' => 'Kamis',
+        'Fri' => 'Jum`at',
+        'Sat' => 'Sabtu',
+        'Sun' => 'Minggu',
         default => throw new exception('Can`t To Parse Day'),
     };
     
-    return $day;
+    return $day . ', ' . $date[0];
 }
 
 /* 
