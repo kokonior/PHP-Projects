@@ -4,6 +4,20 @@
 </head>
 <body>
 
+<?php require("dbfunction.php") ; $link = bukaKoneksi(); ?>
+<?php
+
+If (isset($_POST["submit"])) {
+$queryInsert = "INSERT INTO mahasiswa(nim,nama,alamat)
+VALUES('$_POST[nim]','$_POST[nama]','$_POST[alamat]')";
+$proses = mysql_query($queryInsert);
+if($proses){
+echo "Terima kasih anda telah mengisi data mahasiswa<br><hr>";
+}
+}
+?>
+<?php
+
 <tr>
 <td valign=top>Nim</td>
 <td valign=top>:</td>
