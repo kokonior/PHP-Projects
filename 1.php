@@ -2,10 +2,12 @@
 <html>
 <body>
 <?php
-echo "Today is".date("Y/m/d")."<br>";
-echo "Today is".date("Y.m.d")."<br>";
-echo "Today is".date("Y-m-d")."<br>";
-echo "Today is".date("1");
+echo "Today is".date("Y/m/d").;
+echo "Today is".date("Y.m.d").;
+echo "Today is".date("Y-m-d").;
+  echo"tomorrow is".date("y/m/d").:
+  echo"yesterday is".date("y/m/d").:
+
 ?>
 
 </body>
