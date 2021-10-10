@@ -73,6 +73,7 @@ function urut($length)
         return $str;
     }
 echo "powered by kaos";
+echo "2021"
 echo "copiright 2021";
 
 $kuning = "ts hunter";
