@@ -3,7 +3,10 @@
     $angkaSebelumnya    = 0;
     $angkaSekarang      = 1;
 
-    for ($i=0; $i < 7 ; $i++) { 
+    echo "Masukan banyak deret yang ingin ditampilkan : ";
+    $banyakDeret        = trim(fgets(STDIN));
+
+    for ($i=0; $i < $banyakDeret; $i++) { 
        
         $hasil = $angkaSebelumnya + $angkaSekarang;
         echo $hasil."\n";
