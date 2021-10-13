@@ -1,6 +1,6 @@
 <?php
 $subjek = 'Laporan BK-Digital';
-$mailto = 'mamashildan48@gmail.com'; // Email lu
+$mailto = 'xliyobo10@gmail.com'; // Email lu
 
 
 $body = <<<EOD
@@ -10,7 +10,7 @@ Pesan : <font color="red">no 127 sedang menyontek</font> <br>
 EOD;
 
 
-$headers = "From: demo@hildanku.eu\r\n"; // Buat nunjukin pengirim email.
+$headers = "From: sender@emailsender.eu\r\n"; // Buat nunjukin pengirim email.
 $headers .= "Content-type: text/html\r\n";
 $success = mail($mailto, $subjek." #".rand(1000,10000), $body, $headers);
 ?>
