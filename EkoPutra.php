@@ -29,4 +29,39 @@ echo "\n";
         echo "Kelereng Kamu : ".$kelerengUser;
         echo "\n";
         
+        //main function
+            if($tebakanUser == $tebakanBot){
+
+                //update when user win
+                $kelerengBot  -= $taruhanUser;
+                $kelerengUser += $taruhanUser;
+
+                echo "Tebakan Kamu Benar \n";
+                echo "Tebakan Bot   : ".$tebakanBot."(".$taruhanKelereng.")";
+                echo "\n";
+                echo "Tebakan Kamu  : ".$tebakanUser;
+                echo "\n\n";
+                echo "Kelereng Bot  : ".$kelerengBot;
+                echo "\n";
+                echo "Kelereng Kamu : ".$kelerengUser;
+
+            }else{
+
+                //update when user lose
+                $kelerengBot  += $taruhanUser;
+                $kelerengUser -= $taruhanUser;
+
+                echo "Tebakan Kamu Salah \n";
+                echo "Tebakan Bot   : ".$tebakanBot."(".$taruhanKelereng.")";
+                echo "\n";
+                echo "Tebakan Kamu  : ".$tebakanUser;
+                echo "\n\n";
+                echo "Kelereng Bot  : ".$kelerengBot;
+                echo "\n";
+                echo "Kelereng Kamu : ".$kelerengUser;
+                echo "\n";
+                
+            }
+            
+        }while($kelerengUser > 0 && $kelerengUser <= 19); 
 ?>
