@@ -1,0 +1,7 @@
+<?php
+$unik=mt_rand(125, 455);
+
+echo mt_rand(225, 355);
+echo "<br/>";
+echo $unik;
+?>
