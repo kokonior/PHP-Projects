@@ -13,3 +13,12 @@
             echo "Maka luas segitiga sama dengan 1/2 x $alas x $tinggi = $luas_segitiga";
         }
 ?>
+
+<html>
+<head>
+    <title>Menghitung Luas Segitiga</title>
+</head>
+<body>
+    <h2>Hitung Luas Segitiga dengan PHP</h2>
+    <h3>Isi Data:</h3>
+        </html>
