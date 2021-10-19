@@ -22,6 +22,6 @@ $a = [
 
 var_dump($a);
 
-
+'HACKTOBERFEST';
 
 ?>
