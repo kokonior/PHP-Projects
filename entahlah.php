@@ -1,4 +1,5 @@
 <?php
+// bismilah dapet kaos
 // buat class pc
 class pc {
 	
