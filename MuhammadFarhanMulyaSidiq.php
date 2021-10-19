@@ -40,3 +40,8 @@ function functionPembagian($x, $y)
 }
 
 ?>
+
+echo "Hasil Penjumlahan adalah :" . functionPenambahan(9, 3) . "<br/>";
+echo "Hasil Pengurangan adalah :" . functionPengurangan(9, 3) . "<br/>";
+echo "Hasil Perkalian adalah :"  . functionPerkalian(9, 3) . "<br/>";
+echo "Hasil Penjumlahan adalah :" . functionPembagian(9, 3) . "<br/>";
