@@ -17,4 +17,11 @@ $y = 4; // variable b kita isi dengan nilai 4
 $z = $x - $y; // disini adalah proses nya
 echo "Hasil dari Pengurangan $x - $y = $z"; // disini outputnya
 
+/*
+Kita tambahkan variable uang dan harga nasi goreng dulu.
+*/
+$uang = 9000;
+$harga = 10000;
+echo "Saya : Saya mau beli, uang saya cuman ada Rp.$uang Apa bisa?";
+
 ?>
