@@ -46,3 +46,13 @@ echo "Hasil Penjumlahan adalah :" . functionPembagian(9, 3) . "<br/>";
 
 ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Latihan Function</title>
+</head>
+<body>
+	<h1>Hallo Selamat Datang <?= salam("Pagi"); ?></h1>
+</body>
+</html>
