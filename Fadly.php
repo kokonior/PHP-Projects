@@ -85,4 +85,21 @@ echo "\n";
                 echo "\n";
                 
             }
+            }
+            
+        }while($kelerengUser > 0 && $kelerengUser <= 19); 
+
+        //check winner
+        if($kelerengUser == 20){
+            echo "Selamat Kamu Menang";
+        }else{
+            echo "Kamu Kalah ! DOR";
+        }
+
+    }else{
+
+        echo "Kamu belum memasukan nama harap mulai kembali! \n";
+
+    }
+
 ?>
