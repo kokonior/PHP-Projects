@@ -28,5 +28,10 @@
                 <td>:</td>
                 <td><input type="text" name="alas" required ></td>
                 </tr>
+                <tr>
+                <td>Tinggi Segitiga</td>
+                <td>:</td>
+                <td><input type="text" name="tinggi" required ></td>
+            </tr>
         </table>
     </form>
