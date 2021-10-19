@@ -84,7 +84,7 @@ if($json->success == 0){
 	goto awal;
 	die();
 }
-echo $json->phone." Berhasil mendaftar OYO"; 
+echo $json->phone." Berhasil mendaftar Oyo"; 
 goto awal;
 
 function nama()
