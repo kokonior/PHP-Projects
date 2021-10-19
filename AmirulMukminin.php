@@ -22,5 +22,17 @@
 	<div class="kotak"><?php echo $angka[$i]; ?></div>
 	<?php } ?>
 	
+		<div class="clear"></div>
+
+	<?php foreach ($angka as $a) { ?>
+	<div class="kotak"><?php echo $a; ?></div>
+	<?php } ?>
+
+	<div class="clear"></div>
+
+	<?php foreach ( $angka as $a ) : ?>
+	<div class="kotak"><?= $a; ?></div>
+	<?php endforeach ?>
+		
 </body>
 </html>
