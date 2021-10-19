@@ -33,5 +33,10 @@
                 <td>:</td>
                 <td><input type="text" name="tinggi" required ></td>
             </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><input type="submit" name="submit" value="Hitung"></td>
+            </tr>
         </table>
     </form>
