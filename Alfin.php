@@ -10,4 +10,9 @@ $c = $a + $b; // disini adalah proses nya
 echo "Hasil dari Tambahan $a + $b = $c"; // disini outputnya
 echo "=======================";
 
+$x = 7; // variable a kita isi dengan nilai 7
+$y = 4; // variable b kita isi dengan nilai 4
+$z = $x - $y; // disini adalah proses nya
+echo "Hasil dari Pengurangan $x - $y = $z"; // disini outputnya
+
 ?>
