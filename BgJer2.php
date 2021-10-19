@@ -14,3 +14,19 @@
         }
 ?>
 
+<html>
+<head>
+    <title>Menghitung Luas Segitiga</title>
+</head>
+<body>
+    <h2>Hitung Luas Segitiga dengan PHP</h2>
+    <h3>Isi Data:</h3>
+    <form action="index.php" method="POST" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>Alas Segitiga</td>
+                <td>:</td>
+                <td><input type="text" name="alas" required ></td>
+                </tr>
+        </table>
+    </form>
