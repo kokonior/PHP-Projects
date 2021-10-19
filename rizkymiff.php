@@ -6,7 +6,7 @@ $hello = function($name='') {
 
 echo $hello('rizky');
 
-interface Conteracts {
+interface Contracts {
 
 	public function getResult($param);
 }
@@ -22,7 +22,7 @@ class toClosure
 }
 
 
-class TestA implements Conteracts
+class TestA implements Contracts
 {
     public function getResult($param)
     {
@@ -30,7 +30,7 @@ class TestA implements Conteracts
     }
 }
 
-class TestB implements Conteracts
+class TestB implements Contracts
 {
     public function getResult($param)
     {
