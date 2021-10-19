@@ -12,4 +12,8 @@ if ($_POST['cell']) {
         header("location: result.php?player=" . getTurn());
     }
 }
+
+if (playsCount() >= 9) {
+    header("location: result.php");
+}
 ?>
