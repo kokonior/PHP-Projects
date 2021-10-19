@@ -75,4 +75,10 @@ if (playsCount() >= 9) {
 
 </form>
 
+<script type="text/javascript">
+    function enableButton() {
+        document.getElementById('play-btn').disabled = false;
+    }
+</script>
+
 </html>
