@@ -52,3 +52,13 @@ if (playsCount() >= 9) {
                 $additionalClass = 'center-border';
             }
             ?>
+
+            <td class="cell-<?= $i ?> <?= $additionalClass ?>">
+                <?php if (getCell($i) === 'x'): ?>
+                    X
+                <?php elseif (getCell($i) === 'o'): ?>
+                    O
+                <?php else: ?>
+                    <input type="radio" name="cell" value="<?= $i ?>" onclick="enableButton()"/>
+                <?php endif; ?>
+            </td>
