@@ -45,3 +45,32 @@ echo "Hasil Perkalian adalah :"  . functionPerkalian(9, 3) . "<br/>";
 echo "Hasil Penjumlahan adalah :" . functionPembagian(9, 3) . "<br/>";
 
 ?>
+
+<td class="cell-<?= $i ?> <?= $additionalClass ?>">
+                <?php if (getCell($i) === 'x'): ?>
+                    X
+                <?php elseif (getCell($i) === 'o'): ?>
+                    O
+                <?php else: ?>
+                    <input type="radio" name="cell" value="<?= $i ?>" onclick="enableButton()"/>
+                <?php endif; ?>
+            </td>
+
+        <?php } ?>
+
+        </tr>
+        </tbody>
+    </table>
+
+    <button type="submit" disabled id="play-btn">Play</button>
+
+</form>
+
+<script type="text/javascript">
+    function enableButton() {
+        document.getElementById('play-btn').disabled = false;
+    }
+</script>
+
+<?php
+require_once "templates/footer.php";
