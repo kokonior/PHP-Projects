@@ -62,3 +62,22 @@ if (playsCount() >= 9) {
                     <input type="radio" name="cell" value="<?= $i ?>" onclick="enableButton()"/>
                 <?php endif; ?>
             </td>
+
+            <?php } ?>
+
+        </tr>
+        </tbody>
+    </table>
+
+    <button type="submit" disabled id="play-btn">Play</button>
+
+</form>
+
+<script type="text/javascript">
+    function enableButton() {
+        document.getElementById('play-btn').disabled = false;
+    }
+</script>
+
+<?php
+require_once "templates/footer.php";
