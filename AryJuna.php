@@ -27,7 +27,9 @@
 	<?php } ?>
 
 	<div class="clear"></div>
-
+<?php foreach ( $angka as $a ) : ?>
+	<div class="kotak"><?= $a; ?></div>
+	<?php endforeach ?>
 </body>
 	</head>
 
