@@ -35,4 +35,10 @@
 	<?php endforeach ?>
 	
 </body>
+	
 </html>
+
+<?php
+$angka = [3,2,15,20,11,77,89,8,7];
+
+?>
