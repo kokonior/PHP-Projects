@@ -50,4 +50,20 @@
             }else{
                 $tebakanBot = "ganjil";
             }
+            
+            //main function
+            if($tebakanUser == $tebakanBot){
+
+                //update when user win
+                $kelerengBot  -= $taruhanUser;
+                $kelerengUser += $taruhanUser;
+
+                echo "Tebakan Kamu Benar \n";
+                echo "Tebakan Bot   : ".$tebakanBot."(".$taruhanKelereng.")";
+                echo "\n";
+                echo "Tebakan Kamu  : ".$tebakanUser;
+                echo "\n\n";
+                echo "Kelereng Bot  : ".$kelerengBot;
+                echo "\n";
+                echo "Kelereng Kamu : ".$kelerengUser;
 ?>
