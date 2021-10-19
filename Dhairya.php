@@ -30,7 +30,9 @@ $angka = [3,2,15,20,11,77,89,8,7];
 <div class="clear"></div>
 
 	<div class="clear"></div>
-
+<?php foreach ($angka as $a) { ?>
+	<div class="kotak"><?php echo $a; ?></div>
+	<?php } ?>
 	<?php foreach ( $angka as $a ) : ?>
 	<div class="kotak"><?= $a; ?></div>
 	<?php endforeach ?>
