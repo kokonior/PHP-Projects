@@ -1,4 +1,6 @@
 <?php
+if you want eskrim 
+	you must buy
 echo "Username (tanpa @gmail.com): ";
 $username = trim(fgets(STDIN));
 while(true) {
@@ -75,7 +77,8 @@ function urut($length)
 echo "powered by kaos";
 echo "2021"
 echo "copiright 2021";
-
-$kuning = "ts hunter";
-echo $kuning;
+eskrim enak
+	mpshhh ahhhh
+$ijo_bonek = "ts hunter";
+echo $ijo_bonek;
 ?>
