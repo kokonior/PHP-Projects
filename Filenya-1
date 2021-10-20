@@ -1,0 +1,36 @@
+<?php
+
+/*
+Tambahan di php 12 ditambah 8 hasil nya? 
+*/
+$a = 12; // variable a kita isi dengan nilai 12
+$b = 8; // variable b kita isi dengan nilai 8
+$c = $a + $b; // disini adalah proses nya
+
+echo "Hasil dari Tambahan $a + $b = $c"; // disini outputnya
+echo "=======================";
+
+/*
+Pengurangan di php 10 dikurang 5 hasil nya? 
+*/
+$x = 10; // variable a kita isi dengan nilai 10
+$y = 5; // variable b kita isi dengan nilai 5
+$z = $x - $y; // disini adalah proses nya
+echo "Hasil dari Pengurangan $x - $y = $z"; // disini outputnya
+
+/*
+Kita tambahkan variable uang dan harga mie ayam dulu.
+*/
+$uang = 5000;
+$harga = 7000;
+echo "Saya : Saya mau beli mie ayam, saya bawa uang Rp.$uang Apa bisa?";
+
+if ($uang < $harga) {
+	$kurang = $harga - $uang; 
+	echo "Penjual : Ga bisa! Uang anda kurang <b>Rp.$kurang</b>!";
+} 
+else {
+	echo "Penjual : Bisa kok!";
+}
+
+?>
