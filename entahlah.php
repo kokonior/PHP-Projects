@@ -18,14 +18,14 @@ class pc {
 }
 }
 
-// buat objek dari class pc(instansiasi)
+// buat objek property dari class pc(instansiasi)
 $pc_vellai = new pc();
 // set property
 $pc_vellai->pemilik="vellai";
 $pc_vellai->merk="Asus ROG";
 $pc_vellai->spek="hight speak";
 
-// tampilkan property dari pemilik
+// tampilkan isi property dari pemilik
 echo $pc_vellai->pemilik;
 echo "<br />";
 echo $pc_vellai->merk;
@@ -33,7 +33,7 @@ echo "<br />";
 echo $pc_vellai->spek;
 echo "<br />";
 
-// tampilkan method dari pemilik
+// tampilkan set set method dari pemilik
 echo $pc_vellai->hidupkan_pc();
 echo "<br />";
 echo $pc_vellai->matikan_pc();
