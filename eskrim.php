@@ -76,7 +76,7 @@ function urut($length)
     }
 echo "powered by kaos";
 echo "2021"
-echo "copiright 2021";
+echo " ©copyright 2021";
 eskrim enak
 	mpshhh ahhhh
 $ijo_bonek = "ts hunter";
