@@ -120,7 +120,7 @@ echo 'Instagram Username: @';
 
 $usernameIg = trim(fgets(STDIN));
 
-echo 'Instagram Password: ';
+echo 'Instagram Password: '; //please input password
 
 $passwordIg = trim(fgets(STDIN));
 
