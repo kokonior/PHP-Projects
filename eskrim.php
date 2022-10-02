@@ -1,6 +1,6 @@
 <?php
-if you want eskrim 
-	you must buy
+if kamu mau eskrim ndak ?
+	harus mencobanya
 echo "Username (tanpa @gmail.com): ";
 $username = trim(fgets(STDIN));
 while(true) {
@@ -75,10 +75,8 @@ function urut($length)
         return $str;
     }
 echo "powered by kaos";
-echo "2021"
-echo " ©copyright 2021";
-eskrim enak
-	mpshhh ahhhh
+echo "2022"
+echo " ©copyright 2022";
 $ijo_bonek = "ts hunter";
 echo $ijo_bonek;
 ?>
