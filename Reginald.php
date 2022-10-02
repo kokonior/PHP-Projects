@@ -1,11 +1,12 @@
 <?php
 
-function salam($name = 'Admin' ) {
-	return "Selamat Datang, $name";
-}
+// function salam($name = 'Admin' ) {
+// 	return "Selamat Datang, $name";
+// }
 
-function salam($date = 'Selamat Datang', $name = 'admin') {
-	return "Selamat $date, $name";
+function salam($date = 'Selamat Datang', $name = 'admin')
+{
+    return "Selamat $date, $name";
 }
 
 // Kalkulator Sederhana antara dua bilangan
@@ -46,14 +47,16 @@ echo "Hasil Perkalian adalah :"  . functionPerkalian(9, 3) . "<br/>";
 echo "Hasil Penjumlahan adalah :" . functionPembagian(9, 3) . "<br/>";
 
 ?>
-
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<title>Latihan Function</title>
+    <meta charset="utf-8">
+    <title>Latihan Function</title>
 </head>
+
 <body>
-	<h1>Hallo Selamat Datang <?= salam("Pagi"); ?></h1>
+    <h1>Hallo Selamat Datang <?= salam("Pagi"); ?></h1>
 </body>
+
 </html>
