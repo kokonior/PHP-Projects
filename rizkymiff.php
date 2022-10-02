@@ -1,7 +1,7 @@
 <?php
 
 $hello = function($name='') {
-  return $name;
+  	return $name;
 }
 
 echo $hello('rizky');
