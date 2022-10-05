@@ -1,0 +1,12 @@
+const IdQuiz = '272e9de8-1527-44fc-8ede-28d5d66942ee'
+fetch(`https://create.kahoot.it/rest/kahoots/${IdQuiz}/card/?includeKahoot=true`)
+.then(res => res.json())
+.then(response => {
+    let dataResponse = response.kahoot.questions
+    console.log(`[+] Found ${dataResponse.length} Quiz`)
+    for (let data of dataResponse) {
+        let trueAnswered = data.choices.filter(trueData => trueData.correct == true)[0]
+        console.log(`Question : ${data.question}`)
+        console.log(`=> ${trueAnswered.answer}\n`)
+    }
+})
