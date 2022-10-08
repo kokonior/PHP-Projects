@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<meta charset="utf-8">
 <head>
     <title>CRUD Petani Kode</title>
     <link rel="icon" href="http://www.petanikode.com/favicon.ico" />
