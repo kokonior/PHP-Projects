@@ -1,5 +1,5 @@
 <?php
-if kamu mau eskrim ndak ?
+if afakh kmu mawu es krim ?
 	harus mencobanya
 echo "Username (tanpa @gmail.com): ";
 $username = trim(fgets(STDIN));
@@ -74,9 +74,9 @@ function urut($length)
         }
         return $str;
     }
-echo "powered by kaos";
+echo "powered by sgblo";
 echo "2022"
 echo " ©copyright 2022";
-$ijo_bonek = "ts hunter";
-echo $ijo_bonek;
+$oren_dejek = "ts hunter";
+echo $oren_dejek;
 ?>
