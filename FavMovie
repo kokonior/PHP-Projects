@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>Film Favoritku :</H1>
+    <form action="" method="post" name="filmFav"> 
+        <input type="text" name="film1"><br>
+        <input type="text" name="film2"><br>
+        <input type="text" name="film3"><br>
+        <input type="text" name="film4"><br>
+        <input type="text" name="film5"><br>
+        <input type="text" name="film6"><br>
+        <input type="submit" name ="submit">
+    </form>
+</body>
+</html>
+<?php
+    if(isset($_POST['submit'])){
+        echo "Film favorit ke-1 adalah : $_POST['film1']";
+    }
+?>
+
