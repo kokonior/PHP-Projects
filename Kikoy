@@ -1,0 +1,31 @@
+<title>Auto Visitor</title>
+<form method="GET">
+<input type="text" name="url" value="URL Mu...">
+<input type="max" name="max" value="Maksimum">
+<input type="submit">
+</form>
+
+<?php
+if (!$_GET) die();
+require("autovisitor.class.php");
+
+/*
+* Script by Alal
+* http://www.blogalal.com
+*/
+
+/*
+* Apabila tidak menggunakan form
+* $url = "http://www.blogalal.com/2015/04/showcase-paypal-email-validity-checker.html";
+* $max = 100;
+*/
+
+/* Menggunakan form */
+$url = $_GET["url"]; //URLnya
+$max = $_GET["max"]; //Maksimum visitor yang dikirim
+
+for($i = 1; $i < $max+1; $i++) {
+	$class = new autovisitor($url);
+	echo $i.". SUKSES - [".$class->jalankan()."]<br>";
+}
+?>

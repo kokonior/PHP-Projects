@@ -1,7 +1,7 @@
 <?php
 
 $hello = function($name='') {
-  return $name;
+  	return $name;
 }
 
 echo $hello('rizky');
@@ -44,4 +44,22 @@ $closure = (new toClosure)->bind(new TestB);
 echo $closure->call(new TestA, 'Class A');
 echo "\n";
 echo $closure->call(new TestB, 'Class B');
+
+public function random($length = 16)
+{
+	$string = '';
+
+	while (($len = strlen($string)) < $length) {
+	    $size = $length - $len;
+
+	    $bytes = random_bytes($size);
+
+	    $string .= substr(str_replace(['/', '+', '='], '', base64_encode($bytes)), 0, $size);
+	}
+
+	return $string;
+}
+
+echo random(17);
+
 ?>

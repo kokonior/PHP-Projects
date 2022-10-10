@@ -1,40 +1,29 @@
-<?php
-// bismilah dapet kaos
-// buat class pc
-class pc {
-	
- // buat property untuk class pc
- var $pemilik;
- var $merk;
- var $spek;
-	
- // buat method untuk class pc
+?php
  
- function hidupkan_pc() {
- return "Hidupkan sebuah pc";
- }
- function matikan_pc() {
- return "Matikan sebuah pc";
+// koneksi ke database gammu
+mysql_connect("dbhost", "dbuser", "dbpass");
+mysql_select_db("dbname");
+ 
+// mencari sms yang belum diproses
+$query = "SELECT * FROM inbox WHERE Processed = 'false'";
+$hasil = mysql_query($query);
+while ($data = mysql_fetch_array($hasil))
+{
+  // baca ID dari SMS
+  $id = $data['ID'];
+  // membaca isi SMS dan mengubah menjadi huruf kapital
+  $sms = strtoupper($data['TextDecoded']);
+   
+  // jika isi SMS adalah 'SHUTDOWN'
+  if ($sms == "SHUTDOWN")
+  {
+     // jalankan perintah shutdown
+     exec("shutdown -s -f");
+  }
+   
+  // memberi tanda SMS bahwa sudah diproses
+  $query2 = "UPDATE inbox SET Processed = 'true' WHERE ID = '$id'";
+  mysql_query($query2);  
 }
-}
-
-// buat objek dari class pc(instansiasi)
-$pc_vellai = new pc();
-// set property
-$pc_vellai->pemilik="vellai";
-$pc_vellai->merk="Asus ROG";
-$pc_vellai->spek="hight speak";
-
-// tampilkan property dari pemilik
-echo $pc_vellai->pemilik;
-echo "<br />";
-echo $pc_vellai->merk;
-echo "<br />";
-echo $pc_vellai->spek;
-echo "<br />";
-
-// tampilkan method dari pemilik
-echo $pc_vellai->hidupkan_pc();
-echo "<br />";
-echo $pc_vellai->matikan_pc();
+ 
 ?>

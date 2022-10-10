@@ -345,4 +345,7 @@ if (is_numeric($result)) {
     }
 } else{
 }
+echo "Challange";
+echo "FREE T-SHIRT";
+echo "Repeat?";
 ?>

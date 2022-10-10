@@ -2,7 +2,7 @@
 // Sintaks PHP
 
 for( $i = 0; $i < 5; $i++ ) {
-	echo "Hello World! <br>":
+	echo "Hello World! <br>";
 }
 
 $i = 0;
@@ -16,5 +16,3 @@ do {
 	echo "Hello World! <br>";
 $i++;
 } while( $i < 5 );
-
-?>

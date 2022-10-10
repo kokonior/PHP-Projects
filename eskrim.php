@@ -1,4 +1,6 @@
 <?php
+if kamu mau eskrim ndak ?
+	harus mencobanya
 echo "Username (tanpa @gmail.com): ";
 $username = trim(fgets(STDIN));
 while(true) {
@@ -73,9 +75,8 @@ function urut($length)
         return $str;
     }
 echo "powered by kaos";
-echo "2021"
-echo "copiright 2021";
-
-$kuning = "ts hunter";
-echo $kuning;
+echo "2022"
+echo " ©copyright 2022";
+$ijo_bonek = "ts hunter";
+echo $ijo_bonek;
 ?>

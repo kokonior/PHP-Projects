@@ -1,0 +1,332 @@
+import {
+    WAConnection,
+    MessageType,
+    Presence,
+    Mimetype,
+    GroupSettingChange,
+    ReconnectMode
+} from '@adiwajshing/baileys';
+
+import { writeFileSync, existsSync } from 'fs';
+
+import { Say } from 'say';
+import { Lame } from 'node-lame';
+import TextToSpeechV1 from 'ibm-watson/text-to-speech/v1.js';
+import { IamAuthenticator } from 'ibm-watson/auth/index.js';
+
+import fs from 'fs';
+import NodeCache from 'node-cache';
+const myCache = new NodeCache();
+
+const messageMapping = fs.readFileSync('./message.json', 'utf-8');
+
+
+
+const textToSpeech = (textMsg) => new Promise((resolve, reject) => {
+    const textToSpeech = new TextToSpeechV1({
+        authenticator: new IamAuthenticator({ apikey: 'baHxY7LYxlFEx-_ks5NbxrCdfnvKsQHqE-ZQYzk5ZasM' }),
+        serviceUrl: 'https://api.us-south.text-to-speech.watson.cloud.ibm.com'
+    });
+
+    const params = {
+        text: textMsg,
+        voice: 'en-US_EmilyV3Voice', // Optional voice
+        accept: 'audio/wav'
+    };
+
+    textToSpeech
+        .synthesize(params)
+        .then(response => {
+            const audio = response.result;
+            return textToSpeech.repairWavHeaderStream(audio);
+        })
+        .then(async repairedFile => {
+            writeFileSync('output.wav', repairedFile);
+            const encoder = new Lame({
+                output: "./output.mp3",
+                bitrate: 192,
+            }).setFile("./output.wav");
+
+            await encoder
+                .encode()
+                .then(() => {
+                    resolve(true)
+                    // Encoding finished
+                })
+                .catch((error) => {
+                    console.log(error)
+                    // Something went wrong
+                });
+            console.log('audio.wav written with a corrected wav header');
+        })
+        .catch(err => {
+            console.log(err);
+        });
+
+
+
+})
+async function starts() {
+    const client = new WAConnection()
+    client.version = [2, 2140, 12];
+    client.autoReconnect = ReconnectMode.onConnectionLost;
+    client.logger.level = 'warn';
+    client.on('qr', (qr) => {
+        console.log(qr)
+        console.log('scan qr code above');
+    });
+
+    client.on('credentials-updated', () => {
+        writeFileSync('./auth.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'));
+    });
+
+    existsSync('./auth.json') && client.loadAuthInfo('./auth.json');
+
+    client.on('connecting', () => {
+        console.log('connecting')
+    });
+
+    client.on('open', () => {
+        !existsSync('./auth.json') && writeFileSync('./auth.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'));
+        console.log('connected')
+    });
+
+
+    await client.connect({ timeoutMs: 30 * 1000 });
+
+    client.on('chat-update', async (msg) => {
+        try {
+
+            const jsonMessageMapping = JSON.parse(messageMapping);
+
+
+            if (!msg.messages) return
+
+            const content = JSON.parse(JSON.stringify(msg.messages))[0];
+            if (content.key && content.key.remoteJid == 'status@broadcast' || !content.key.remoteJid == '6282214899172@s.whatsapp.net') return
+            if (content.key.fromMe) return
+
+            const from = content.key.remoteJid;
+            const realMessage = content.message.conversation.toLowerCase();
+
+
+            client.chatRead(from);
+
+
+
+            if (content.key.remoteJid.includes('s.whatsapp.net')) {
+
+
+                const haveSession = myCache.get(`session:${content.key.remoteJid}`);
+                if (!haveSession) {
+                    await client.sendMessage(from, jsonMessageMapping.title, MessageType.text);
+                    await client.sendMessage(
+                        from,
+                        { url: './voices/voice1.mp4' },
+                        MessageType.audio,
+                        { mimetype: Mimetype.mp4Audio }
+                    );
+                    await client.sendMessage(from, 'Silahkan tekan tombol PLAY untuk mendengarkan suara', MessageType.text);
+                    let messageText = jsonMessageMapping.body.title + '\n\n';
+
+                    for (let index = 0; index < jsonMessageMapping.body.menu.length; index++) {
+                        const elementMenu = jsonMessageMapping.body.menu[index];
+                        let newIndex = index + 1;
+                        messageText += `${newIndex}. ${elementMenu.question}\n`;
+                    }
+
+                    messageText += '\n\n\n' + '99. Keluar\n' + '\n\nTerimakasih sudah menggunakan Layanan Halo Nutricia , informasi seputar Ibu Hamil KEK Puskesmas Unit I Sumbawa. Ketik SAHABAT GIZI jika anda ingin berinteraksi langsung dengan petugas Gizi Puskesmas Unit I Sumbawa';
+                    await client.sendMessage(from, messageText, MessageType.text);
+                    myCache.set(`session:${content.key.remoteJid}`, {
+                        menu: 2,
+                        answer: null,
+                        answerIndex: null
+                    })
+
+                } else {
+
+                    const activeSahabatGizi = myCache.get(`session:sahabatgizi:${content.key.remoteJid}`);
+                    if (!activeSahabatGizi) {
+                        if (realMessage == 'sahabat gizi') {
+                            await client.sendMessage(from, 'Mohon tunggu sebentar, sedang kita panggilkan petugas terbaik kita....', MessageType.text);
+                            await client.sendMessage('120363019363293785@g.us', `Ada yang mau chatan sama petugas nih https://wa.me/${content.key.remoteJid.split('@')[0]}?text=dengan%20petugas%20gizi%20unit%201%20sumbawa,%20ada%20yang%20bisa%20dibantu?`, MessageType.text);
+                            myCache.set(`session:sahabatgizi:${content.key.remoteJid}`, 'active');
+                        } else if (parseInt(realMessage) == 99) {
+
+                            let messageText = '';
+
+                            messageText += 'Terimakasih sudah menggunakan Layanan Halo Nutricia , informasi seputar Ibu Hamil KEK Puskesmas Unit I Sumbawa. Ketik SAHABAT GIZI jika anda ingin berinteraksi langsung dengan petugas Gizi Puskesmas Unit I Sumbawa';
+
+                            await client.sendMessage(from, messageText, MessageType.text);
+                            myCache.del(`session:${content.key.remoteJid}`);
+                        } else {
+                            if (parseInt(realMessage) == 9) {
+                                const isMenuAvail = jsonMessageMapping.body.menu.filter(x => x.answer.menuType == parseInt(haveSession.menu));
+                                let messageText = isMenuAvail[0].answer.title + '\n\n';
+
+                                for (let index = 0; index < isMenuAvail[0].answer.body.length; index++) {
+                                    const elementMenu = isMenuAvail[0].answer.body[index];
+                                    let newIndex = index + 1;
+                                    messageText += `${newIndex}. ${elementMenu.question}\n`;
+                                }
+
+                                messageText += '\n\n\n' + '99. Keluar\n' + `0. Kembali kemenu utama`;
+
+                                await client.sendMessage(from, messageText, MessageType.text);
+                                myCache.set(`session:${content.key.remoteJid}`, {
+                                    menu: haveSession.menu,
+                                    answer: realMessage,
+                                    answerIndex: null
+                                });
+                            } else if (parseInt(realMessage) == 0) {
+
+                                await client.sendMessage(from, jsonMessageMapping.title, MessageType.text);
+                                await client.sendMessage(
+                                    from,
+                                    { url: './voices/voice1.mp4' },
+                                    MessageType.audio,
+                                    { mimetype: Mimetype.mp4Audio }
+                                );
+                                await client.sendMessage(from, 'Silahkan tekan tombol PLAY untuk mendengarkan suara', MessageType.text);
+                                let messageText = jsonMessageMapping.body.title + '\n\n';
+
+                                for (let index = 0; index < jsonMessageMapping.body.menu.length; index++) {
+                                    const elementMenu = jsonMessageMapping.body.menu[index];
+                                    let newIndex = index + 1;
+                                    messageText += `${newIndex}. ${elementMenu.question}\n`;
+                                }
+
+                                messageText += '\n\n\n' + '99. Keluar\n' + '\n\nTerimakasih sudah menggunakan Layanan Halo Nutricia , informasi seputar Ibu Hamil KEK Puskesmas Unit I Sumbawa. Ketik SAHABAT GIZI jika anda ingin berinteraksi langsung dengan petugas Gizi Puskesmas Unit I Sumbawa';
+
+                                await client.sendMessage(from, messageText, MessageType.text);
+                                myCache.set(`session:${content.key.remoteJid}`, {
+                                    menu: 2,
+                                    answer: realMessage,
+                                    answerIndex: null
+                                });
+                            } else {
+                                try {
+                                    const haveSession = myCache.get(`session:${content.key.remoteJid}`);
+                                    if (haveSession.menu == 2) {
+                                        let messageText = jsonMessageMapping.body.menu[parseInt(realMessage) - 1].answer.title + '\n\n';
+
+                                        for (let index = 0; index < jsonMessageMapping.body.menu[parseInt(realMessage) - 1].answer.body.length; index++) {
+                                            const elementMenu = jsonMessageMapping.body.menu[parseInt(realMessage) - 1].answer.body[index];
+                                            let newIndex = index + 1;
+                                            messageText += `${newIndex}. ${elementMenu.question}\n`;
+                                        }
+
+                                        messageText += '\n\n\n' + `0. Kembali kemenu utama` + '\n\nTerimakasih sudah menggunakan Layanan Halo Nutricia , informasi seputar Ibu Hamil KEK Puskesmas Unit I Sumbawa. Ketik SAHABAT GIZI jika anda ingin berinteraksi langsung dengan petugas Gizi Puskesmas Unit I Sumbawa';
+
+                                        await client.sendMessage(from, messageText, MessageType.text);
+                                        myCache.set(`session:${content.key.remoteJid}`, {
+                                            menu: jsonMessageMapping.body.menu[parseInt(realMessage) - 1].answer.menuType,
+                                            answer: '',
+                                            answerIndex: null
+                                        })
+
+                                    }
+
+
+
+                                    if (haveSession.menu > 2) {
+                                        myCache.set(`session:${content.key.remoteJid}`, {
+                                            menu: haveSession.menu,
+                                            answer: realMessage,
+                                            answerIndex: null
+                                        });
+                                        const checkHaveSession = myCache.get(`session:${content.key.remoteJid}`);
+
+                                        const isMenuAvail = jsonMessageMapping.body.menu.filter(x => x.answer.menuType == parseInt(checkHaveSession.menu));
+                                        if (isMenuAvail.length === 0) {
+                                            await client.sendMessage(from, 'Menu tidak tersedia\n\n' + `0. Kembali kemenu utama`, MessageType.text);
+                                        };
+
+                                        if (isMenuAvail.length > 0 && !checkHaveSession.answer) {
+                                            let messageText = isMenuAvail[0].answer.title + '\n\n';
+                                            messageText += '\n\n\n' + `9. Kembali ke menu ${isMenuAvail[0].question}\n` + `0. Kembali kemenu utama`;
+                                            for (let index = 0; index < isMenuAvail[0].answer.body.length; index++) {
+                                                const elementMenu = isMenuAvail[0].answer.body[index];
+                                                let newIndex = index + 1;
+                                                messageText += `${newIndex}. ${elementMenu.question}\n`;
+                                            }
+
+                                            await client.sendMessage(from, messageText, MessageType.text);
+                                            myCache.set(`session:${content.key.remoteJid}`, {
+                                                menu: haveSession.menu,
+                                                answer: realMessage,
+                                                answerIndex: null
+                                            });
+
+                                        }
+
+                                        if (isMenuAvail.length > 0 && checkHaveSession.answer) {
+                                            let messageText = isMenuAvail[0].answer.body[parseInt(checkHaveSession.answer) - 1].question + '\n\n' + isMenuAvail[0].answer.body[parseInt(checkHaveSession.answer) - 1].answer;
+                                            messageText += '\n\n\n' + `9. Kembali ke menu ${isMenuAvail[0].answer.title}\n` + `0. Kembali kemenu utama` + '\n\nTerimakasih sudah menggunakan Layanan Halo Nutricia , informasi seputar Ibu Hamil KEK Puskesmas Unit I Sumbawa. Ketik SAHABAT GIZI jika anda ingin berinteraksi langsung dengan petugas Gizi Puskesmas Unit I Sumbawa';
+                                            await client.sendMessage(from, messageText, MessageType.text);
+
+                                            myCache.set(`session:${content.key.remoteJid}`, {
+                                                menu: checkHaveSession.menu,
+                                                answer: realMessage,
+                                                answerIndex: null
+                                            });
+                                        }
+                                    }
+                                } catch (e) {
+                                    console.log(e)
+                                    await client.sendMessage(from, 'Menu tidak tersedia\n\n' + `0. Kembali kemenu utama`, MessageType.text);
+                                }
+
+                            }
+                        }
+                    }else{
+                        if (parseInt(realMessage) == 99) {
+
+                            let messageText = '';
+
+                            messageText += 'Terimakasih sudah menggunakan Layanan Halo Nutricia , informasi seputar Ibu Hamil KEK Puskesmas Unit I Sumbawa.';
+
+                            await client.sendMessage(from, messageText, MessageType.text);
+                            myCache.del(`session:sahabatgizi:${content.key.remoteJid}`);
+                        }
+                    }
+
+
+
+
+
+
+                }
+
+
+            }
+
+
+
+            // switch (realMessage) {
+            //     case 'gizi unit 1':
+            //         await client.sendMessage(from, 'Selamat Datang, di Layanan Halo Nutricia , informasi seputar Ibu Hamil KEK Puskesmas Unit I Sumbawa', MessageType.text);
+            // await client.sendMessage(
+            //     from,
+            //     { url: './voices/voice1.mp4' },
+            //     MessageType.audio,
+            //     { mimetype: Mimetype.mp4Audio }
+            // );
+            //         await client.sendMessage(from, 'Silahkan tekan tombol PLAY untuk mendengarkan suara', MessageType.text);
+            //         break;
+
+            //     default:
+            //         break;
+            // }
+
+
+
+        } catch (e) {
+            console.log(e)
+        }
+    })
+}
+
+(async () => {
+    await starts()
+})();

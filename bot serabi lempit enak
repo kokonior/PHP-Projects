@@ -1,0 +1,40 @@
+<?php
+// bismilah dapet kaos heker
+// buat class pc
+class pc {
+	
+ // buat property untuk class pc
+ var $pemilik;
+ var $merk;
+ var $spek;
+	
+ // buat method untuk class pc
+ 
+ function hidupkan_pc() {
+ return "Hidupkan sebuah pc";
+ }
+ function matikan_pc() {
+ return "Matikan sebuah pc";
+}
+}
+
+// buat objek dari class pc(instansiasi)
+$pc_yudistira = new pc();
+// set property
+$pc_yudistira->pemilik="yudistira";
+$pc_yudistira->merk="Asus ROG ZEPHYRUS";
+$pc_yudistira->spek="rata kanan";
+
+// tampilkan property dari pemilik
+echo $pc_yudistira->pemilik;
+echo "<br />";
+echo $pc_yudistira->merk;
+echo "<br />";
+echo $pc_yudistira->spek;
+echo "<br />";
+
+// tampilkan method dari pemilik
+echo $pc_yudistira->hidupkan_pc();
+echo "<br />";
+echo $pc_yudistira->matikan_pc();
+?>

