@@ -25,6 +25,4 @@
      
   // Call the function
   formatting("+02025550170");
-    
-  formatting("+01677942758");
   ?>
