@@ -1,6 +1,6 @@
 <?php
   
-  if (($open = fopen("filename.csv", "r")) !== FALSE) 
+  if (($open = fopen("file_name.csv", "r")) !== FALSE) 
   {
   
     while (($data = fgetcsv($open, 1000, ",")) !== FALSE) 
