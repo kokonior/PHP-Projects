@@ -8,7 +8,7 @@ class GFG {
   
     // Function used to print a string
     static function someFunction() {
-        echo "Parent Arif \n";
+        echo "Parent  \n";
     }
 }
   
@@ -16,7 +16,7 @@ class Article extends GFG {
   
     // Function to print a string
     static function someFunction() {
-        echo "Arif Article \n";
+        echo " Article \n";
     }   
 }
   
