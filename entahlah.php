@@ -1,9 +1,4 @@
-<?php
- 
-$__uid = 'ab2d-e'.mt_rand(10, 99).'1-i'.mt_rand(10, 99).'k-a' . mt_rand(100, 999);
- 
-$__setting = [
-	['my', '-', 'Malaysia', 'https://hd.c.mi.com/my/eventapi/api/aptcha/index?type=netflix&uid='.$__uid],
+
 	['th', '-', 'Thailand', 'https://hd.c.mi.com/th/eventapi/api/aptcha/index?type=netflix&uid='.$__uid],
 	['ph', '-', 'Philippines', 'https://hd.c.mi.com/ph/eventapi/api/aptcha/index?type=netflix&uid='.$__uid]
 ];
