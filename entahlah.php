@@ -1,4 +1,37 @@
 ?php
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>beranda</title>
+	</head>	
+	<body>
+		<header>
+			<span>logo</span>
+			<nav>
+				<ul>
+					<li>
+						<a href="index.html">beranda</a>
+					</li>
+					<li>
+						<a href="tentangkami.html">tentang kami</a>
+					</li>
+					</li>
+						<a href="kontak.html">kontak</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section>
+				<h1>BERANDA</h1>
+				<P>PARAGRAF</P>
+			</section>
+		</main>
+		<footer>
+			<P>ALAMAT</P>
+		</footer>
+	</body>
+</html>
  
 // koneksi ke database gammu
 mysql_connect("dbhost", "dbuser", "dbpass");
