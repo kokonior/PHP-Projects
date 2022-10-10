@@ -11,11 +11,3 @@ $komentar<br>");
 //variabel bertipe string
 $hasil = $a + $b;
 echo ("Hasil jumlah a dan b adalah = $hasil <br>");
-//variabel bertipe double
-$nama = "STMIK AKAKOM";
-$garis = "=====================================";
-echo "<p>";
-echo $garis . "<br>";
-echo $komentar . " Di Lab " . $nama . "<br>Belajar
-dengan giat ya.... <br>";
-echo $garis . "<br>";
