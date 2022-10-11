@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Froggy Jump Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.4.7/phaser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js"></script>
+    <style>
+        body {
+            background-image: url("https://thumbs.dreamstime.com/b/blur-road-tree-nature-background-abstract-green-leaf-146188951.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        
+        h1 {
+            align-items: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: bisque;
+        }
+        
+        #solve:hover {
+            background-image: linear-gradient(red, yellow);
+            font-weight: bold;
+            color: blue;
+            transform: rotate(15deg);
+        }
+        
+        #generate-problem:hover {
+            background-image: linear-gradient(blue, violet);
+            font-weight: bold;
+            color: rgb(255, 0, 149);
+            transform: rotate(15deg);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-light " style="font-size: 25px; font-family: sans-serif; background-color:rgba(22, 22, 22, 0.925);float:inherit;">
+        <h1>Minimum jumps Greedy Game</h1>
+
+    </nav>
+    <div id="container">
+        <div id="mynetwork">
+        </div>
+        <div id="container2">
+            <span id="temptext" style="width: 100%; text-align: center; font-size: large; padding: 10%">
+            </span>
+        </div>
+    </div>
+
+    <div>
+        <br>
+        <button type="button" class="btn btn-danger" id="generate-problem">Get New Problem</button>
+        <br>
+        <button type="button" class="btn btn-success" id="solve">Solve</button>
+    </div>
+</body>
+
+</html>
