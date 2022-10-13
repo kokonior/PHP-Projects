@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+	<html>
+		<head>
+			<title>Menggabungkan semua</title>
+				<form action="birthday.html" method="post"name="bdate">
+					<center><p>TANGGAL</p><input type="date"><center>
+					<center><p>PASSWORD</p><input type="password"><center>
+					<center><p>NOMOR</p><input type="number"><center>
+					<center><p>EMAIL</p><input type="email"><center>
+					<center><p>RANGE</p><input type="range"><center>
+					<center><p>GAMBAR</p><input type="image"><center>
+					<center><p>WARNA</p><input type="color"><center>
+					<center><p>KLIK</p><input type="checkbox"><center>
+					<center><p>RADIO</p><input type="radio"><center>
+					<center><p>KLIK</p><input type="submit"><center>
+					<center><p>ISI BIO ANDA</p><textarea rows="5" cols="20"></textarea></center>
+				</form>
+				<body bgColor="gray" text="white">
+					<h1>Halo Mahasiswa</h1>
+						<p><strong>Ini Halaman Pertama Saya</strong></p>
+				</body>
+				<tr>.............................................................................................................................................................................................................................................................................................................................................................................</tr>
+				<body bgColor="gray" text="green">
+					<h1><center>INI JUDUL MENGGUNAKAN HEADING 1</center></h1>
+					<h2><center>INI JUDUL MENGGUNAKAN HEADING 2</center></h2>
+					<h3><center>INI JUDUL MENGGUNAKAN HEADING 3</center></h3>
+					<h4><center>INI JUDUL MENGGUNAKAN HEADING 4</center></h4>
+					<h5><center>INI JUDUL MENGGUNAKAN HEADING 5</center></h5>
+					<h6><center>INI JUDUL MENGGUNAKAN HEADING 6</center></h6>
+				</body>
+				<tr>.............................................................................................................................................................................................................................................................................................................................................................................</
+				<body>
+					<br><p align="left">Kalimat ini menggunakan paragraf kiri</p></br>
+					<br><p align="right">Kalimat ini menggunakan paragraf kanan</p></br>
+					<br><p align="center">Kalimat ini menggunakan paragraf tengah</p></br>
+				</body>
+				<tr>.............................................................................................................................................................................................................................................................................................................................................................................</
+				<body>
+					<ul>
+						<li>Membuat link ordered</li>
+						<li>Membuat link ordered</li>
+						<li>Membuat link ordered</li>
+						<li>Membuat link ordered</li>
+					</ul>
+					<ol>
+						<li>Membuat link ordered</li>
+						<li>Membuat link ordered</li>
+						<li>Membuat link ordered</li>
+						<li>Membuat link ordered</li>
+					</ol>
+				</body>
+				<tr>.............................................................................................................................................................................................................................................................................................................................................................................</
+				<body>
+					<br><a href="P1_4311901075.html">Tugas P1</a></br>
+					<br><a href="P2_4311901075.html">Tugas P2</a></br>
+					<br><a href="P3_4311901075.html">Tugas P3</a></br>
+					<br><a href="P4_4311901075.html">Tugas P4</a></br>
+					<br><a href="P6_4311901075.html">Tugas P6</a></br>
+					<br><a href="P7_4311901075.html">Tugas P7</a></br>
+					<br><a href="P8_4311901075.html">Tugas P8</a></br>
+				</body>
+				<tr>.............................................................................................................................................................................................................................................................................................................................................................................</
+				<body>
+					<h1><center>PHOTO</center></h1>
+						<center><img src="Desert.JPG" height="500px" width="700px"></center>
+				</body>
+				<tr>.............................................................................................................................................................................................................................................................................................................................................................................</
+				<body>
+					<table border="1">
+						<tr>
+							<td>Kolom 1</td>
+							<td>Kolom 2</td>
+							<td>Kolom 3</td>
+							<td>Kolom 4</td>
+						</tr>
+						<tr>
+							<td>Kolom 5</td>
+							<td>Kolom 6</td>
+							<td>Kolom 7</td>
+							<td>Kolom 8</td>
+						</tr>
+						<tr>
+							<td>Kolom 9</td>
+							<td>Kolom 10</td>
+							<td>Kolom 11</td>
+							<td>Kolom 12</td>
+						</tr>
+					</table>
+				</body>

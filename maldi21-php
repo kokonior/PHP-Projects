@@ -1,0 +1,24 @@
+<?php
+    // Komen Inline
+
+    /*
+        Komen
+        Multipleline
+    */
+    $rupiah=1000;
+    $rupiah1=array("4","7","6");
+    $rupiah2=[1,3,7];
+    
+    echo "HAAAAAAAA {$rupiah} <br/>";
+    echo "HEEEEEEEE {$rupiah1[0]} <br/>";
+    echo "HOOOOOOOO {$rupiah2[2]} <br/>";
+
+    echo "<br/>";
+    $nama="Oke";
+    $umur=28;
+    echo $nama;
+    echo "<br/>";
+    echo $umur;
+    echo "<br/>";
+    echo "hai perkenalkan nama saya ".$nama." dan saya berumur ".$umur;
+?>

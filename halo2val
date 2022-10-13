@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>GBI RENGASDENGKLOK</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="hero">
+            <div class="navbar">
+                <img src="img/gbi.png" alt="image" height="100" width="100">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="contac.html">Contact</a></li>
+                </ul>
+                <div class="navbar-icons">
+                   <a href="https://www.instagram.com/ryooovall/"> <img src="img/bell.png"></a>
+                   <a href=""></a> <img src="img/user.png">
+                    <img src="img/email2.png">
+                </div>
+                </div>
+                <div class="banner">
+                    <div class="left-column">
+                        <div class="search-box">
+                            <a href="https://www.instagram.com/ryooovall/"></a><img src="img/search.png">
+                            <input type="text">
+                        </div>
+                        <h1>TENTANG GBI LEMBAH SION RENGAS<span>DENGKLOK</span></h1>
+                        <h3>Visi & Misi</h3>
+                        <p>
+                            Roma 12:2. Janganlah kamu menjadi serupa dengan dunia ini, 
+                            tetapi berubahlah oleh pembaharuan budimu,<br>sehingga kamu dapat membedakan manakah kehendak Allah: apa yang baik, yang berkenan kepada Allah dan yang sempurna.
+                        </p>
+                        <div class="btn">
+                           <a href="index.html"> <button type="button" class="primary-btn">Kembali Kehalaman Awal</button> </a>
+                            <a href="https://www.google.com/maps/place/GBI+RENGASDENGKLOK/@-6.1544956,107.2977784,18z/data=!4m12!1m6!3m5!1s0x2e6977c4a3d9a5c5:0xe9499e4009260c77!2sGereja+Bethel+Indonesia+Sion!8m2!3d-6.3086538!4d107.3036325!3m4!1s0x2e697f9594e86281:0x258ac4b9110fe72e!8m2!3d-6.1539229!4d107.2979404"> <button type="button"> Google Maps</button> </a>
+                        </div>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/gbi_rengasdengklok/"> <img src="img/instagram.png"> </a>
+                                <a href="https://www.youtube.com/channel/UCqN1IGfR56lE2TyonA0untg"> <img src="img/youtube2.png"> </a>
+                        </div>    
+                    </div>
+
+
+                    <div class="right-columns"></div>
+                    <img src="img/1.jpg" alt="image" height="500" width="500">
+                </div>
+    </body>
+</html>
