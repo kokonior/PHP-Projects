@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>F420 WEBSITE</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+			<nav class="navbar">
+				<img class="logo" src="logo.png">
+				<ul>
+					<li><a class="active" href="#">Home</a></li>
+					<li><a href="feedback/index.html">Feedback</a></li>
+					<li><a href="#">Membership</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="https://www.instagram.com/f420esportsid/">Instagram</a></li>
+				</ul>
+			</nav>
+			<div class="center">
+			<h1>F420 WEBSITE CLAN</h1>
+			<h2>About F420</h2>
+			<div class="buttons">
+			<button>Explore More</button>
+			<button class="btn2">Subscribe Us</button>
+		</div>
+		</div>
+</body>
+</html>

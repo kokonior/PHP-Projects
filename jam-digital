@@ -1,0 +1,10 @@
+<?php
+
+$init = 685;
+$hours = floor($init / 3600);
+$minutes = floor(($init / 60) % 60);
+$seconds = $init % 60;
+
+echo "$hours:$minutes:$seconds";
+
+?>

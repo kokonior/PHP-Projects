@@ -1,0 +1,8 @@
+<?php
+$a1=array("a"=>"cc","b"=>"aa","c"=>"bb","d"=>"dd");
+$a2=array("a"=>"a","f"=>"xxx","g"=>"zzz");
+$a3=array("h"=>"red","b"=>"green","g"=>"blue");
+
+$result=array_diff_assoc($a1,$a2,$a3);
+print_r($result);
+?>

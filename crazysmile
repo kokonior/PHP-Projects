@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * Nomor 1
+ * 
+ * Khoiru Miftakhul Falah 19051204006
+ * 
+ 
+ * 
+ */
+function absolute($x)
+{
+	if ($x < 0) return $x * -1;
+	return $x;
+}
+
+function min_abs($A)
+{
+	$nilai_min = absolute($A[0] * 2);
+
+	for ($i = 0; $i < count($A); $i++) {
+		for ($j = $i; $j < count($A); $j++) {
+			$abs = absolute($A[$i] + $A[$j]);
+			$nilai_min = $abs < $nilai_min ? $abs : $nilai_min;
+		}
+	}
+
+	return $nilai_min;
+}
+
+echo min_abs([-8, 4, 5, -10, 3]);
+?>

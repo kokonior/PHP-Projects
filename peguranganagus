@@ -1,0 +1,16 @@
+<?php
+    //OPERATOR ARITMATIKA
+    $a = 2;
+    $b = 3;
+    $c = 5;
+    $d = 10;
+ 
+    
+ 
+    echo "<br/> PENGURANGAN <br/>";
+    echo ($a-$d)."<br/>"; //tercetak -8
+    $f = $d-(-$c);
+    echo $f."<br/>";      //tercetak 15
+    echo -$d."<br/>";     //tercetak -10
+    
+?>
