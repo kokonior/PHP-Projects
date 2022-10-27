@@ -1,0 +1,1 @@
+<?php echo “THANKS HACKTOBERFEST2022”; ?>
