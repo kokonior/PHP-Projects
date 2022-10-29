@@ -1,0 +1,14 @@
+  <?php
+            $kalimat="Saya sedang belajar pemrograman string PHP";
+            $dicari    ="nonton";
+        ?>
+        <p>Kalimatnya adalah: "<?php echo $kalimat?>"</p>
+        <p>Kata yang di cari: <u><?php echo $dicari?></u></p>
+        <?php
+        if(preg_match("/$dicari/i", $kalimat)) {
+            echo 'Kata <b>'.$dicari.'</b> ditemukan.';
+        }
+        else {
+            echo 'Kata <b>'.$dicari.'</b> tidak ditemukan.';
+        }
+        ?>

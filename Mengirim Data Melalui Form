@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <title>Form</title>
+  </head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Form
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Data Mahasiswa</a>
+          <a class="dropdown-item" href="#">Form Lain</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<?php
+	$nama = $_GET['no'];
+	$alamat = $_GET['prodi'];
+	$nama = $_GET['nama'];
+	$kelamin = $_GET['kelamin'];
+	$tempat = $_GET['tempat'];
+	$tanggal = $_GET['tanggal'];
+	$agama = $GET['agama'];
+	$alamat = $_GET['alamat'];	
+	$notlp = $_GET['notlp'];
+	$email = $_GET['email'];
+?>
+<div class="container">
+	<h1>Form Pendaftaran</h1>
+	<p>Isi Form dibawah ini untuk menginput data Mahasiswa</p>
+	<form action="form_calon_mhs.php" method="GET">
+<title>Form Pendaftaran</title>
+</head>
+<body>
+<h1> Form Pendaftaran </h1>
+<table>
+<tr>
+<td> No.Pendaftaran <td> : <td> <input type="text" name="no"/> </td>
+<label for="label_nama"><?php echo $no ?></label>
+</tr>
+<td> Program Studi yang dipilih <td> :
+<td>
+<select>
+<option> Pilih Prodi </option>
+<option> Teknik Informatika </option>
+<option> Multimedia dan Jaringan </option>
+<option> Animasi </option>
+<option> Geomatika </option>
+<option> Rekayasa Keamanan Siber </option>
+</select>
+<label for="label_nama"><?php echo $prodi ?></label>
+</td>
+<tr>
+<td> Nama Siswa <td> : <td> <input type="text" name="nama"/>
+<label for="label_nama"><?php echo $nama ?></label>
+</td>
+</tr>
+<td> Jenis kelamin <td> : <td>
+<input type="radio" name="Jenis_kelamin" value="laki-laki"/> Laki - laki
+<input type="radio" name="jenis_kelamin" value="perempuan"/>Perempuan
+<label for="label_nama"><?php echo $kelamin ?></label>
+</td>
+</tr>
+<tr>
+<td> Tempat Lahir <td> : <td> <input type="text" name="tempat_lahir"/> </td>
+<label for="label_nama"><?php echo $tempat ?></label>
+</tr>
+<tr>
+<td> Tanggal lahir <td> : <td>
+<label for="label_nama"><?php echo $tanggal ?></label>
+<select>
+<option></option>
+<option>00</option>
+<option>01</option>
+<option>02</option>
+<option>03</option>
+<option>04</option>
+<option>05</option>
+<option>06</option>
+<option>07</option>
+<option>08</option>
+<option>09</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+<option>13</option>
+<option>14</option>
+<option>15</option>
+<option>16</option>
+<option>17</option>
+<option>18</option>
+<option>19</option>
+<option>20</option>
+<option>21</option>
+<option>22</option>
+<option>23</option>
+<option>24</option>
+<option>25</option>
+<option>26</option>
+<option>27</option>
+<option>28</option>
+<option>29</option>
+<option>30</option>
+<option>31</option>
+</select>
+<select>
+<option></option>
+<option>00</option>
+<option>01</option>
+<option>02</option>
+<option>03</option>
+<option>04</option>
+<option>05</option>
+<option>06</option>
+<option>07</option>
+<option>08</option>
+<option>09</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+</select>
+<select>
+<option></option>
+<option>2000</option>
+<option>2001</option>
+<option>2002</option>
+<option>2003</option>
+<option>2004</option>
+<option>2005</option>
+<option>2006</option>
+<option>2007</option>
+<option>2008</option>
+<option>2009</option>
+<option>2010</option>
+<option>2011</option>
+<option>2012</option>
+<option>2013</option>
+<option>2014</option>
+<option>2015</option>
+<option>2016</option>
+<option>2017</option>
+<option>2018</option>
+<option>2019</option>
+<option>2020</option>
+</select>
+<td> (tanggal/bulan/tahun) </td>
+<tr>
+<td> Agama <td> :
+<label for="label_nama"><?php echo $agama ?></label>
+<td>
+<select>
+<option> Pilih Agama </option>
+<option> Islam </option>
+<option> Kristen Protestan </option>
+<option> Katolik </option>
+<option> Hindu </option>
+<option> Buddha </option>
+<option> Kong hu Cu </option>
+</select>
+</td>
+</tr>
+<tr>
+<td> Alamat <td> : <td> <input type="text" name="alamat"/> </td>
+<label for="label_nama"><?php echo $alamat ?></label>
+</tr>
+</td>
+<td> No. Telepon <td> : <td> <input type="text" name="No_HP"/></td>
+<label for="label_nama"><?php echo $notlp ?></label>
+</tr>
+<tr>
+<td> Email <td> : <td> <input type="mail" name="email"/> </td>
+<label for="label_nama"><?php echo $email ?></label>
+</tr>
+<tr>
+
+</tr>
+<tr>
+<td> <input type="submit" name="submit" value="DAFTARKAN"/> <input type="reset" name="reset" value="RESET"/> </td>
+</table>
+</form
+
+</body>
+</html>
