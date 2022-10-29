@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Registrasi Dan Login Makinrajin.com</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box register">
+        <div class="header">
+            <h2>Form Register</h2>
+            <hr>
+        </div>
+        <form action="#" method="post">
+            <div class="form-input">
+                <label for="email">Email</label>
+                <input type="text">
+            </div>
+            <div class="form-input">
+                <label for="username">Username</label>
+                <input type="text">
+            </div>
+            <div class="form-input">
+                <label for="phone">Phone Number</label>
+                <input type="text">
+            </div>
+            <div class="form-input">
+                <label for="password">Password</label>
+                <input type="password">
+            </div>
+            <div class="form-input">
+                <label for="re-type">Re-Type Password</label>
+                <input type="password">
+            </div>
+            <div class="agreements">
+                <input type="checkbox">
+                <label for="agreements">I agree with all terms and conditions</label>
+            </div>
+            <div class="button-input">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+    <div class="box login">
+        <div class="header">
+            <h2>Form Login</h2>
+            <hr>
+        </div>
+        <form action="#" method="post">
+            <div class="form-input">
+                <label for="username">Username</label>
+                <input type="text">
+            </div>
+            <div class="form-input">
+                <label for="password">Password</label>
+                <input type="password">
+            </div>
+            <div class="agreements">
+                <input type="checkbox">
+                <label for="agreements">Remember me</label>
+            </div>
+            <div class="button-input">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
