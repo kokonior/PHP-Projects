@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+
+<?php
+// define variables and set to empty values
+$your name = $e-mail = $gender = $comment = $your website = $birth = $hobby = $job =  "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$your name = test_input($_POST["name"]);
+$e-mail = test_input($_POST["email"]);
+$your website = test_input($_POST["website"]);
+$comment = test_input($_POST["comment"]);
+$birth = test_input($_POST["birth"]);
+$hobby = test_input($_POST["hobby"]);
+$job = test_input($_POST["job"]);
+$gender = test_input($_POST["gender"]);
+}
+
+function test_input($data) {
+$data = trim($data);
+$data = stripslashes($data);
+$data = htmlspecialchars($data);
+return $data;
+}
+?>
