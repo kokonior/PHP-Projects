@@ -29,7 +29,7 @@
 
 <?php 
 
-$kotak = array('anjing', 'kurakura', 'koala', 'anjing');
+$kotak = array('anjing', 'kurakura', 'koala', 'anjing', 'babi');
 $nama = ['Hilman', 'Endy', 'Tiqa'];
 
 print_r( array_unique($kotak) );
