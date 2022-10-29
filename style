@@ -1,0 +1,149 @@
+
+
+
+*{
+	margin:0px;
+	padding:0px;
+}
+#welcome-section{
+	background-color:hsl(160, 100%, 90%);
+	display:flex;
+	flex-direction:column;
+	height:100vh;
+	align-items:center;
+	justify-content:center;
+}
+nav{
+	background-color:#C5CAE9;
+	height:70px;
+	width:100%;
+	position:fixed;
+	display:flex;
+	align-items:center;
+	justify-content:flex-end;
+	color:black;
+	z-index:0;
+}
+nav a{
+	font-size:30px;
+	margin:0 5% 0 5%;
+}
+nav a:hover{
+	color:#43A047;
+}
+main section{
+	margin:20px 10% 20px 10%;
+	display:grid;
+	grid-template:repeat(2,1fr)/repeat(3,1fr);
+	grid-column-gap:10px;
+	justify-items:center;
+}
+.project-tile{
+	margin-bottom:80px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+.project-tile img{
+	width: 250px;
+}
+main{
+	padding-top:120px;
+	display:flex;
+	flex-direction:column;
+}
+main button {
+	text-align:center;
+	border-radius:5px;
+	border-color:#03A9F4;
+	cursor:pointer;
+	box-shadow:none;
+	width:auto;
+	align-self:center;
+	padding:5px 10px 5px 10px;
+	margin-bottom:20px;
+}
+main a,main a:hover,main a:active,main a:focus,main a:visited{
+	text-decoration:none;
+	color:#03A9F4;
+}
+main section div a:hover{
+	border-radius:10px;
+	box-shadow:
+		-5px 5px 20px,
+		5px -5px 20px,
+		5px 5px 20px,
+		-5px -5px 20px;
+}
+a, a:hover, a:active, a:focus, a:visited{
+	color:black;
+	text-decoration:none;
+}
+main section div a img{
+	border:solid;
+	border-color:#03A9F4;
+	border-width:2px;
+	border-radius:10px;
+	height:120px;
+	width:auto;
+	overflow:hidden;
+}
+footer{
+	background-color:#A7FFEB;
+	height:100vh;
+	display:flex;
+	flex-direction:row;		align-items:center;
+	justify-content:space-evenly;
+}
+footer div a{
+	background-color:black;
+	border-radius:50%;
+	height:150px;
+	width:150px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	white-space:pre-line;
+	overflow:hidden;
+}
+footer div a:hover{
+	border-radius:50%;
+	box-shadow:
+		-5px 5px 10px,
+		5px -5px 10px,
+		5px 5px 10px,
+		-5px -5px 10px;
+}
+footer div a img{
+	border-radius:50%;
+}
+footer div p{
+	text-align:center;
+}
+@media (max-width:800px){
+	nav{
+	background-color:#C5CAE9;
+	height:100px;
+	width:100%;
+	position:fixed;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	color:black;
+	z-index:1;
+}
+	main section{
+		margin:20px 10% 20px 10%;
+		display:grid;
+		grid-template:repeat(6,1fr)/1fr;
+		justify-items:center;
+	}
+	footer{
+		background-color:#A7FFEB;
+		height:100vh;
+		display:flex;
+		align-items:center;
+		justify-content:space-evenly;
+	}
+}
+

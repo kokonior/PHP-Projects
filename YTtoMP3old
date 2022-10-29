@@ -1,0 +1,36 @@
+const fetch = require('node-fetch');
+const fs = require('fs');
+const cheerio = require('cheerio');
+
+const getUrlDownloadYoutube = (videoId) => new Promise((resolve, reject) => {
+    fetch('https://api.vevioz.com/file/mp3/'+videoId)
+    .then(res => res.text())
+    .then(async res => {
+        const $ = cheerio.load(res);
+        const url = $('body > div.bg-gray-300.py-5.pb-8 > div > div > div > div > a:nth-child(1)').attr('href')
+        resolve(url)
+    })
+    .catch(err => reject(err))
+    
+});
+
+const downloadFileToMp3 = (url, videoId) => new Promise((resolve, reject) => {
+    fetch(url)
+    .then(res => res.buffer())
+    .then(async res => {
+        await fs.writeFileSync(`./${videoId}.mp3`, res);
+        resolve('success')
+    })
+    .catch(err => reject(err))
+});
+
+
+(async () => {
+
+    // https://www.youtube.com/watch?v=XwRlsNpJgD0 <= this video id
+    const videoId = 'XwRlsNpJgD0';
+
+    const resultDownloadUrl = await getUrlDownloadYoutube(videoId);
+    await downloadFileToMp3(resultDownloadUrl, videoId);
+
+})();
