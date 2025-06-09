@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Gacha Jodoh PHP</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #ffe6e6;
+      text-align: center;
+      padding: 50px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 8px;
+      border: none;
+    }
+    #hasil {
+      margin-top: 30px;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+  <h1>❤️ Gacha Jodoh PHP ❤️</h1>
+  <form method="POST">
+    <input type="text" name="nama1" placeholder="Nama Pertama" required>
+    <input type="text" name="nama2" placeholder="Nama Kedua" required><br>
+    <button type="submit">Cocokkan!</button>
+  </form>
+
+  <?php
+  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nama1 = strtolower($_POST['nama1']);
+    $nama2 = strtolower($_POST['nama2']);
+    $gabung = $nama1 . $nama2;
+    $total = 0;
+    for ($i = 0; $i < strlen($gabung); $i++) {
+      $total += ord($gabung[$i]);
+    }
+    $hasil = $total % 101;
+
+    echo "<div id='hasil'>";
+    echo "<p>Kecocokan: <strong>$hasil%</strong></p>";
+
+    if ($hasil > 80) echo "🔥 Kalian cocok banget!";
+    elseif ($hasil > 60) echo "💖 Ada harapan!";
+    elseif ($hasil > 40) echo "🤔 Bisa dicoba...";
+    else echo "😬 Waduh, kayaknya temenan aja ya.";
+
+    echo "</div>";
+  }
+  ?>
+</body>
+</html>
